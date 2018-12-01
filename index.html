@@ -11,7 +11,7 @@
 <body>
 
   <header class="page-header">
-  	<div class="page-header__inner">
+    <div class="page-header__inner">
   		<a href="/" class="logo"><img src="" alt="book store"></a>
 
   		<span class="header-time">с 9:00 до 19:00</span>
@@ -28,13 +28,11 @@
   				<li class="main-nav__item">
   					<a href="" class="main-nav__link">Контакты</a>
   				</li>
-  				<li class="main-nav__item--btn">
-  					<a href="#" class="main-nav__basket"></a>
-  				</li>
-  				<li class="main-nav__item--btn">
-  					<a href="#" class="main-nav__phone"></a>
-  				</li>
   			</ul>
+  			<div class="main-nav__button">
+  				<a href="#" class="main-nav__button--basket"></a>
+  				<a href="#" class="main-nav__button--phone"></a>
+  			</div>
   		</nav>
   	</div>
   </header>
@@ -87,15 +85,15 @@
 		  		<li class="catalog__tab-item">
 		  			<a href="" class="catalog__tab-link">Творчество</a>
 		  		</li>
-		  		<!-- <li class="catalog__tab-item">
-		  			<a href="" class="catalog__tab-link">Бизнес</a>
-		  		</li> -->
+		  		<li class="catalog__tab-item">
+		  			<a href="" class="catalog__tab-link">ТочноНеБизнес</a>
+		  		</li>
 		  	</ul>
 	 	</div>
 
 	 	<div class="catalog__list-wrap">
 	 		<div class="catalog__list">
-	 			<article class="product-card-mini">
+	 			<!-- <article class="product-card-mini">
 	 				<h2 class="product-card-mini__title">
 	 					<a href="">Латеральная логика</a>
 	 				</h2>
@@ -181,7 +179,7 @@
 	 				</a>
 	 				<p class="product-card-mini__descr">Ключевые работы, темы, направления, техники</p>
 	 				<span class="product-card-mini__price">365 &#8381;</span>
-	 			</article>
+	 			</article> -->
 	 		</div>
 
 	 		<div class="catalog__page-number-wrap">
@@ -298,7 +296,6 @@
   <footer class="page-footer">
   	<div class="page-footer__inner">
   		<a href="/" class="logo"><img src="" alt="book store"></a>
-
   		<span class="header-time">с 9:00 до 19:00</span>
 
   		<nav class="footer-nav">
@@ -318,5 +315,113 @@
   </footer>
 
   <script src="js/script.js"></script>
+
+
+	<script>
+		const data = {
+	      productCards: [
+	        {
+	          title: 'Латеральная логика',
+	          titleLink: '',
+	          imglLink: '',
+	          img: '',
+	          description: 'Головоломный путь к нестандартному мышлению',
+	          price: '500 '
+	        }, 
+	        {
+	          title: 'Путиводитель по лжи',
+	          titleLink: '',
+	          imglLink: '',
+	          img: '',
+	          description: 'Критическое мышление в эпоху постправды',
+	          price: '630 '
+	        }, 
+	        {
+	          title: 'Дао физики',
+	          titleLink: '',
+	          imglLink: '',
+	          img: '',
+	          description: 'Исследование параллелей между современной физикой и восточной философией',
+	          price: '560 '
+	        }, 
+	        {
+	          title: 'Не очевидно',
+	          titleLink: '',
+	          imglLink: '',
+	          img: '',
+	          description: 'Как выявлять тренды раньше других',
+	          price: '365 '
+	        }, 
+	        {
+	          title: 'Суперпотребители',
+	          titleLink: '',
+	          imglLink: '',
+	          img: '',
+	          description: 'Кто это и почему они так важны для вашего бизнеса',
+	          price: '500 '
+	        }, 
+	        {
+	          title: 'Маркетинг в социальных сетях',
+	          titleLink: '',
+	          imglLink: '',
+	          img: '',
+	          description: '',
+	          price: '630 '
+	        }, 
+	        {
+	          title: 'Правильный выбор',
+	          titleLink: '',
+	          imglLink: '',
+	          img: '',
+	          description: 'Практическое руководство по принятию взвешанных решений',
+	          price: '560 '
+	        }, 
+	        {
+	          title: 'Главное в истории искусств',
+	          titleLink: '',
+	          imglLink: '',
+	          img: '',
+	          description: 'Ключевые работы, темы, направления, техники',
+	          price: '365 '
+	        }, 
+	      ]
+	    };
+
+	    const cards = document.querySelector('.catalog__list');
+			    
+	      const elements = document.querySelectorAll('.product-card-mini');
+
+	      function createCards(data) {
+	        const productCardsArr = data.productCards;
+	        let cardString = ``;
+
+	        productCardsArr.forEach(function(productCard) {
+	          cardString = cardString + `<article class="product-card-mini">
+				<h2 class="product-card-mini__title">
+					<a href="${productCard.titleLink}">${productCard.title}</a>
+				</h2>
+				<a href="${productCard.imgLink}" class=".product-card-mini__img-wrap">
+					<img src="${productCard.img}" alt="" class="product-card-mini__img">
+				</a>
+				<p class="product-card-mini__descr">${productCard.description}</p>
+				<span class="product-card-mini__price">${productCard.price}&#8381;</span>
+			</article>`;
+	        });
+
+	        return cardString;
+	      }
+
+	      function insertElements(data, wrap) {
+	        const html = createCards(data);
+
+	        wrap.innerHTML = html;
+	      }
+
+	      insertElements(data, cards);
+
+
+	</script>
+
+
 </body>
 </html>

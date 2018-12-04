@@ -92,7 +92,7 @@
  	</div>
 
  	<div class="catalog__list-wrap">
- 		<div class="j-catalog__list">
+ 		<div class="catalog__list j-catalog-list">
  			<!-- <article class="product-card-mini">
  				<h2 class="product-card-mini__title">
  					<a href="">Латеральная логика</a>
@@ -316,9 +316,9 @@
 
 
 
-<script src="js/script.js"></script>
+<script type="module" src="./js/script.js"></script>
 
-<script>
+<!-- <script>
 
 	const data = {
       books: [
@@ -400,7 +400,7 @@
     const cardsWrap = document.querySelector('.j-catalog__list');
 
     function createCard(book) {
-        const card = document.createElement('div');
+        const card = document.createElement('article');
         card.classList.add('product-card-mini');
 
         card.innerHTML = `<h2 class="product-card-mini__title">
@@ -430,7 +430,7 @@
       insertElements(data, cardsWrap);
 	}
 
-</script>
+</script> -->
 
 
 

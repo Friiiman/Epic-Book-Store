@@ -2,6 +2,7 @@
 <html lang="ru" class="no-js  page">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Документ</title>
   <link rel="stylesheet" type="text/css" href="css/style.css">
   <script>
@@ -13,7 +14,7 @@
 <header class="page-header">
     <div class="page-header__inner">
       <div class="logo__inner">
-    		<a href="/" class="logo"><img src="" alt="book store"></a>
+    		<a href="#" class="logo"><img src="" alt="book store"></a>
     		<span class="logo-time">с 9:00 до 19:00</span>
       </div>
 
@@ -21,18 +22,22 @@
   			<button class="main-nav__toggle">Главное меню</button>
   			<ul class="main-nav__list">
   				<li class="main-nav__item">
-  					<a href="" class="main-nav__link">Книги</a>
+  					<a href="#" class="main-nav__link">Книги</a>
   				</li>
   				<li class="main-nav__item">
-  					<a href="" class="main-nav__link">Рекомендации</a>
+  					<a href="#" class="main-nav__link">Рекомендации</a>
   				</li>
   				<li class="main-nav__item">
-  					<a href="" class="main-nav__link">Контакты</a>
+  					<a href="#" class="main-nav__link">Контакты</a>
   				</li>
   			</ul>
-  			<div class="main-nav__button">
-  				<a href="#" class="main-nav__button--basket"></a>
-  				<a href="#" class="main-nav__button--phone"></a>
+  			<div class="main-nav__buttons">
+  				<a href="#" class="main-nav__buttons-item">
+            <div class="main-nav__buttons-item--basket"></div>
+          </a>
+  				<a href="#" class="main-nav__buttons-item">
+            <div class="main-nav__buttons-item--phone"></div>
+          </a>
   			</div>
   		</nav>
   	</div>
@@ -43,52 +48,61 @@
 <main class="page-main">
   <div class="promo">
   	<div class="promo__inner">
-  		<div class="slider">
-  			<div class="slider__inner">
-  				<article class="slider__item">
-  					<div class="slider__item-text">
-	  					<p class="slider__item-descr">Новое поступление книги...</p>
-	  					<h2 class="slider__item-title">Название книги</h2>
-	  					<a href="#" class="slider__item-link">Хочу узнать о книге больше</a>
-  					</div>
-  					<a href=""><img src="" alt="" class="slider__item-img"></a>
-  				</article>
+  		<div class="promo__slider">
 
-  				<article class="slider__item">
-  					<div class="slider__item-text">
-	  					<p class="slider__item-descr">Новое поступление книги...</p>
-	  					<h2 class="slider__item-title">Название книги</h2>
-	  					<a href="#" class="slider__item-link">Хочу узнать о книге больше</a>
-  					</div>
-  					<a href=""><img src="" alt="" class="slider__item-img"></a>
-  				</article>
-  			</div>
+        <div class="book-card-big">
+
+    			<div class="slider__inner j-slider">
+    				<article class="slider__item">
+    					<div class="slider__item-text">
+  	  					<p class="slider__item-descr">Новое поступление книги...</p>
+  	  					<h2 class="slider__item-title">Название книги</h2>
+  	  					<a href="#" class="slider__item-link">Хочу узнать о книге больше</a>
+    					</div>
+    					<a href="#"><img src="" alt="" class="slider__item-img"></a>
+    				</article>
+
+    				<article class="slider__item j-slider">
+    					<div class="slider__item-text">
+  	  					<p class="slider__item-descr">Новое поступление книги...</p>
+  	  					<h2 class="slider__item-title">Название книги</h2>
+  	  					<a href="#" class="slider__item-link">Хочу узнать о книге больше</a>
+    					</div>
+    					<a href="#"><img src="" alt="" class="slider__item-img"></a>
+    				</article>
+    			</div>
+
+        </div>
+
   		</div>
   	</div>
   </div>
 
   <section class="catalog">
-  	<h1 class="catalog__title">Каталог</h1>
-  	<div class="catalog__tabs-wrap">
-	  	<ul class="catalog__tabs">
-	  		<li class="catalog__tab-item">
-	  			<a href="" class="catalog__tab-link">Все</a>
+    <div class="catalog__inner">
+  	  <h1 class="catalog__title">Каталог книг</h1>
+    </div>
+
+  	<div class="tabs">
+	  	<ul class="tabs__inner j-tabs">
+	  		<li class="tab-item">
+	  			<a href="#" data-type="" class="tab-link">Все</a>
 	  		</li>
-	  		<li class="catalog__tab-item">
-	  			<a href="" class="catalog__tab-link">Маркетинг</a>
+	  		<li class="tab-item">
+	  			<a href="#" data-type="marketing" class="tab-link">Маркетинг</a>
 	  		</li>
-	  		<li class="catalog__tab-item">
-	  			<a href="" class="catalog__tab-link">Научпоп</a>
+	  		<li class="tab-item">
+	  			<a href="#" data-type="science" class="tab-link">Научпоп</a>
 	  		</li>
-	  		<li class="catalog__tab-item">
-	  			<a href="" class="catalog__tab-link">Бизнес</a>
+	  		<li class="tab-item">
+	  			<a href="#" data-type="business" class="tab-link">Бизнес</a>
 	  		</li>
-	  		<li class="catalog__tab-item">
-	  			<a href="" class="catalog__tab-link">Творчество</a>
+	  		<li class="tab-item">
+	  			<a href="#" data-type="creativity" class="tab-link">Творчество</a>
 	  		</li>
-	  		<li class="catalog__tab-item">
-	  			<a href="" class="catalog__tab-link">ТочноНеБизнес</a>
-	  		</li>
+	  		<!-- <li class="tab-item">
+	  			<a href="#" class="tab-link">ТочноНеБизнес</a>
+	  		</li> -->
 	  	</ul>
  	  </div>
 
@@ -183,31 +197,46 @@
    			</article> -->
    		</div>
 
-   		<div class="catalog__page-number-wrap">
-   			<ul class="catalog__page-number">
-   				<li class="catalog__page-number__item">
-   					<a href="" class="catalog__page-number__item-link">1</a>
+   		<div class="catalog__pagination">
+   			<ul class="pagination">
+   				<li class="pagination__item">
+   					<button class="pagination__link">1</button>
    				</li>
-   				<li class="catalog__page-number__item">
-   					<a href="" class="catalog__page-number__item-link">2</a>
+   				<li class="pagination__item">
+   					<button class="pagination__link">2</button>
    				</li>
-   				<li class="catalog__page-number__item">
-   					<a href="" class="catalog__page-number__item-link">3</a>
+   				<li class="pagination__item">
+   					<button class="pagination__link">3</button>
    				</li>
-   				<li class="catalog__page-number__item">
-   					<a href="" class="catalog__page-number__item-link">4</a>
+   				<li class="pagination__item">
+   					<button class="pagination__link">4</button>
    				</li>
-   				<li class="catalog__page-number__item">
-   					<a href="" class="catalog__page-number__item-link">5</a>
+   				<li class="pagination__item">
+   					<button class="pagination__link">5</button>
    				</li>
-   				<li class="catalog__page-number__item">...</li>
-   				<li class="catalog__page-number__item">
-   					<a href="" class="catalog__page-number__item-link">10</a>
+   				<li class="pagination__item">
+            <button class="pagination__link">6</button>
+          </li>
+          <li class="pagination__item">
+            <button class="pagination__link">7</button>
+          </li>
+          <li class="pagination__item">
+            <button class="pagination__link">8</button>
+          </li>
+          <li class="pagination__item">
+            <button class="pagination__link">9</button>
+          </li>
+   				<li class="pagination__item">
+   					<button class="pagination__link">10</button>
    				</li>
    			</ul>
    		</div>
    	</div>
   </section>
+
+
+  <!-- ul & li -->
+  <!-- ширина пробелов в процентах от родителя  .delivery { &:before {cont'' posa t0 l0 w40% h5 bgc} }-->
 
   <section class="delivery">
   	<div class="delivery__inner">
@@ -237,6 +266,9 @@
   	</div>
   </section>
 
+
+  <!-- linear gradient -->
+
   <section class="news">
   	<div class="news__inner">
   		<div class="news__header">
@@ -248,9 +280,9 @@
 	  		<div class="news__list">
 	  			<article class="product-card-mini">
 	 				<h2 class="product-card-mini__title">
-	 					<a href="">Латеральная логика</a>
+	 					<a href="#">Латеральная логика</a>
 	 				</h2>
-	 				<a href="" class="product-card-mini__img-wrap">
+	 				<a href="#" class="product-card-mini__img-wrap">
 	 					<img src="" alt="" class="product-card-mini__img">
 	 				</a>
 	 				<p class="product-card-mini__descr">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto.</p>
@@ -258,9 +290,9 @@
 
 	 			<article class="product-card-mini">
 	 				<h2 class="product-card-mini__title">
-	 					<a href="">Путеводитель по лжи</a>
+	 					<a href="#">Путеводитель по лжи</a>
 	 				</h2>
-	 				<a href="" class="product-card-mini__img-wrap">
+	 				<a href="#" class="product-card-mini__img-wrap">
 	 					<img src="" alt="" class="product-card-mini__img">
 	 				</a>
 	 				<p class="product-card-mini__descr">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto.</p>
@@ -268,9 +300,9 @@
 
 	 			<article class="product-card-mini">
 	 				<h2 class="product-card-mini__title">
-	 					<a href="">Дао физики</a>
+	 					<a href="#">Дао физики</a>
 	 				</h2>
-	 				<a href="" class="product-card-mini__img-wrap">
+	 				<a href="#" class="product-card-mini__img-wrap">
 	 					<img src="" alt="" class="product-card-mini__img">
 	 				</a>
 	 				<p class="product-card-mini__descr">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto.</p>
@@ -278,9 +310,9 @@
 
 	 			<article class="product-card-mini">
 	 				<h2 class="product-card-mini__title">
-	 					<a href="">Не очевидно</a>
+	 					<a href="#">Не очевидно</a>
 	 				</h2>
-	 				<a href="" class="product-card-mini__img-wrap">
+	 				<a href="#" class="product-card-mini__img-wrap">
 	 					<img src="" alt="" class="product-card-mini__img">
 	 				</a>
 	 				<p class="product-card-mini__descr">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto.</p>
@@ -297,20 +329,20 @@
 <footer class="page-footer">
   <div class="page-footer__inner">
     <div class="logo__inner">
-    	<a href="/" class="logo"><img src="" alt="book store"></a>
+    	<a href="#" class="logo"><img src="" alt="book store"></a>
     	<span class="logo-time">с 9:00 до 19:00</span>
     </div>
 
   	<nav class="footer-nav">
   		<ul class="page-footer-nav__list">
   			<li class="page-footer-nav__item">
-  				<a href="" class="page-footer-nav__link">Книги</a>
+  				<a href="#" class="page-footer-nav__link">Книги</a>
   			</li>
   			<li class="page-footer-nav__item">
-  				<a href="" class="page-footer-nav__link">Рекомендации</a>
+  				<a href="#" class="page-footer-nav__link">Рекомендации</a>
   			</li>
   			<li class="page-footer-nav__item">
-  				<a href="" class="page-footer-nav__link">Контакты</a>
+  				<a href="#" class="page-footer-nav__link">Контакты</a>
   			</li>
   		</ul>
   	</nav>

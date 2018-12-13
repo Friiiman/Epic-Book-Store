@@ -2,6 +2,7 @@
 <html lang="ru" class="no-js  page">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Документ</title>
   <link rel="stylesheet" type="text/css" href="css/style.css">
   <script>
@@ -10,32 +11,33 @@
 </head>
 <body>
 
-<header class="page-header">
-    <div class="page-header__inner">
-      <div class="logo__inner">
-    		<a href="#" class="logo"><img src="" alt="book store"></a>
-    		<span class="logo-time">с 9:00 до 19:00</span>
-      </div>
 
-  		<nav class="main-nav">
-  			<button class="main-nav__toggle">Главное меню</button>
-  			<ul class="main-nav__list">
-  				<li class="main-nav__item">
-  					<a href="#" class="main-nav__link">Книги</a>
-  				</li>
-  				<li class="main-nav__item">
-  					<a href="#" class="main-nav__link">Рекомендации</a>
-  				</li>
-  				<li class="main-nav__item">
-  					<a href="#" class="main-nav__link">Контакты</a>
-  				</li>
-  			</ul>
-  			<div class="main-nav__button">
-  				<a href="#" class="main-nav__button--basket"></a>
-  				<a href="#" class="main-nav__button--phone"></a>
-  			</div>
-  		</nav>
-  	</div>
+<header class="page-header">
+  <div class="page-header__inner">
+    <div class="logo__inner">
+  		<a href="#" class="logo"><img src="" alt="book store"></a>
+  		<span class="logo-time">с 9:00 до 19:00</span>
+    </div>
+
+  	<nav class="main-nav">
+  		<button class="main-nav__toggle">Главное меню</button>
+  		<ul class="main-nav__list">
+  			<li class="main-nav__item">
+  				<a href="#" class="main-nav__link">Книги</a>
+  			</li>
+  			<li class="main-nav__item">
+  				<a href="#" class="main-nav__link">Рекомендации</a>
+  			</li>
+  			<li class="main-nav__item">
+  				<a href="#" class="main-nav__link">Контакты</a>
+  			</li>
+  		</ul>
+  		<div class="main-nav__button">
+  			<a href="#" class="main-nav__button--basket"></a>
+  			<a href="#" class="main-nav__button--phone"></a>
+  		</div>
+  	</nav>
+  </div>
 </header>
 
 
@@ -74,12 +76,12 @@
       </div>
       
       <div class="book-purchase__form__inner">
-        <form action="">
-          <input type="submit" value="Добавить в корзину">
-          <input id="quantity" type="text">
-          <label for="quantity">шт.</label>
-          <input id="likes" type="checkbox">
-          <label for="likes">20 людям понравилась эта книга</label>
+        <form action="" class="book-purchase__form">
+          <input type="submit" value="Добавить в корзину" class="book-purchase__form__submit">
+          <input id="quantity" type="text" class="book-purchase__form__quantity">
+          <label for="quantity" class="book-purchase__form__quantity-text">шт.</label>
+          <input id="likes" type="checkbox" class="book-purchase__form__likes">
+          <label for="likes" class="book-purchase__form__likes-text">20 людям понравилась эта книга</label>
         </form>
       </div>
     </div>
@@ -146,9 +148,11 @@
     </div>
   </div>
 
-  <div class="library">
-    <h2 class="library__title">Мы открыли для вас уютную библиотеку</h2>
-    <p class="library__location">Приходите к нам по адресу Никитская 10, каждый день с 12:00 до 18:00</p>
+  <div class="library__inner">
+    <div class="library">
+      <h2 class="library__title">Мы открыли для вас уютную библиотеку</h2>
+      <p class="library__location">Приходите к нам по адресу Никитская 10, каждый день с 12:00 до 18:00</p>
+    </div>
   </div>
 </main>
 

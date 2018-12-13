@@ -11,7 +11,6 @@
 </head>
 <body>
 
-
 <header class="page-header">
   <div class="page-header__inner">
     <div class="logo__inner">
@@ -20,7 +19,6 @@
     </div>
 
     <nav class="main-nav">
-      <button class="main-nav__toggle">Главное меню</button>
       <ul class="main-nav__list">
         <li class="main-nav__item">
           <a href="#" class="main-nav__link">Книги</a>
@@ -43,36 +41,27 @@
 
 
 <main class="page-main">
-  <section class="contacts">
-    <div class="contacts__inner">
-      <h1 class="cintacts__title">Контакты</h1>
-      <div class="contacts__map__inner">
+  <section class="recommendation">
+    <h2 class="recommendation__title">Наши рекомендации</h2>
+    <div class="recomendation__articles">
+      .
+    </div>
 
-        <div class="contacts__map-description">
-          <span class="contacts__map-location">Набережная реки Фонтанки, 202</span>
-          <span class="contacts__map-time">с 9:00 до 19:00 ежедневно</span>
-          <a href="phone:89111234567" class="contacts__map-phone">+7 (911) 123 45 67</a>
-        </div>
-
-        <div class="contacts__map">
-        </div>
-
-      </div>
-
-
-      <div class="form__inner">
-        <form id="form" action="" class="form">
-          <h2 class="form__title">Есть вопросы?</h2>
-          <p class="form__text">Напишите нам на почту. Отвечаем в течении дня</p>
-          <input type="text" value="Ваша почта" class="form__mail">
-          <input type="text" value="Сообщение" class="form__message">
-          <input id="agree" type="checkbox" class="form__checkbox">
-          <label for="agree" class="form__checkbox-text">Я согласен(-на) с <a href="#">политикой конфиденциальности</a> и <a href="#">правилами обработки данных</a></label>
-        </form>
-        <input form="form" type="submit" value="Отправить" class="form__submit">
-      </div>
+    <div class="recommendation__book-gift">
+      <h3 class="recommendation__book-gift__title">Книга в подарок!</h3>
+      <span class="recommendation__book-gift__description">При вашем новом заказе мы подарим вам книгу</span>
+      <article class="product-card-mini">
+          <h2 class="product-card-mini__title">
+            <a href="">Путиводитель по лжи</a>
+          </h2>
+          <a href="" class="product-card-mini__img-wrap">
+            <img src="" alt="Обложка книги" class="product-card-mini__img">
+          </a>
+          <p class="product-card-mini__descr">Критическое мышление в эпоху постправды</p>
+        </article>
     </div>
   </section>
+
 
   <div class="library__inner">
     <div class="library">
@@ -106,10 +95,6 @@
     </nav>
   </div>
 </footer>
-
-
-<script type="module" src="./js/script.js"></script>
-
 
 </body>
 </html>

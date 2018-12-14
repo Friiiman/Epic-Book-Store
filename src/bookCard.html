@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="ru" class="no-js  page">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Документ</title>
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+  <script>
+    document.documentElement.className = document.documentElement.className.replace('no-js', 'js');
+  </script>
+</head>
+<body>
+
+
+<header class="page-header">
+  <div class="page-header__inner">
+    <div class="logo__inner">
+  		<a href="#" class="logo"><img src="" alt="book store"></a>
+  		<span class="logo-time">с 9:00 до 19:00</span>
+    </div>
+
+  	<nav class="main-nav">
+  		<button class="main-nav__toggle">Главное меню</button>
+  		<ul class="main-nav__list">
+  			<li class="main-nav__item">
+  				<a href="#" class="main-nav__link">Книги</a>
+  			</li>
+  			<li class="main-nav__item">
+  				<a href="#" class="main-nav__link">Рекомендации</a>
+  			</li>
+  			<li class="main-nav__item">
+  				<a href="#" class="main-nav__link">Контакты</a>
+  			</li>
+  		</ul>
+  		<div class="main-nav__button">
+  			<a href="#" class="main-nav__button--basket"></a>
+  			<a href="#" class="main-nav__button--phone"></a>
+  		</div>
+  	</nav>
+  </div>
+</header>
+
+
+
+<main class="page-main">
+  <div class="book-card">
+    <div class="book-purchase">
+      <div class="book-purchase__pictures">
+        <img src="" alt="Обложка книги:">
+        <div class="book-purchase__pages">
+          <img src="" alt="Страница киниги" class="book-purchase__page">
+          <img src="" alt="Страница киниги" class="book-purchase__page">
+          <img src="" alt="Страница киниги" class="book-purchase__page">
+        </div>
+      </div>
+
+      <div class="book-purchase__about">
+        <span class="book-purchase__about-autor"></span>
+        <span class="book-purchase__about-title"></span>
+        <span class="book-purchase__about-description"></span>
+      </div>
+
+      <div class="book-purchase__properties__inner">
+        <div class="book-purchase__properties-title__inner">
+          <span class="book-purchase__properties-title"></span>
+          <span class="book-purchase__properties-title"></span>
+          <span class="book-purchase__properties-title"></span>
+          <span class="book-purchase__properties-title"></span>
+        </div>
+        <div class="book-purchase__properties-value__inner">
+          <span class="book-purchase__properties-value"></span>
+          <span class="book-purchase__properties-value"></span>
+          <span class="book-purchase__properties-value"></span>
+          <span class="book-purchase__properties-value"></span>
+        </div>
+      </div>
+      
+      <div class="book-purchase__form__inner">
+        <form action="" class="book-purchase__form">
+          <input type="submit" value="Добавить в корзину" class="book-purchase__form__submit">
+          <input id="quantity" type="text" class="book-purchase__form__quantity">
+          <label for="quantity" class="book-purchase__form__quantity-text">шт.</label>
+          <input id="likes" type="checkbox" class="book-purchase__form__likes">
+          <label for="likes" class="book-purchase__form__likes-text">20 людям понравилась эта книга</label>
+        </form>
+      </div>
+    </div>
+
+    <div class="book-card__description">
+      <h2 class="book-card__description-title">Краткое описание</h2>
+      <div class="book-card__description-text__inner">
+        <p class="book-card__description-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ullam, obcaecati!</p>
+        <p class="book-card__description-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ullam, obcaecati!</p>
+      </div>
+      <a href="#" class="book-card__description-link">Показать полностью</a>
+      <div class="book-card__description__social">
+        <a href="#" class="book-card__description__social-item facebook"></a>
+        <a href="#" class="book-card__description__social-item vkontakte"></a>
+        <a href="#" class="book-card__description__social-item like"></a>
+        <a href="#" class="book-card__description__social-item unlike"></a>
+      </div>
+    </div>
+  </div>
+
+  <div class="books-subject">
+    <h2 class="books-subject__title">Книги по тематике</h2>
+    <a href="#" class="books-subject__link">Больше книг по теме</a>
+    <div class="books-subject__books">
+      <!-- <article class="product-card-mini">
+          <h2 class="product-card-mini__title">
+            <a href="">Латеральная логика</a>
+          </h2>
+          <a href="" class="product-card-mini__img-wrap">
+            <img src="" alt="" class="product-card-mini__img">
+          </a>
+          <p class="product-card-mini__descr">Головоломный путь к нестандартному мышлению</p>
+        </article>
+
+        <article class="product-card-mini">
+          <h2 class="product-card-mini__title">
+            <a href="">Путиводитель по лжи</a>
+          </h2>
+          <a href="" class="product-card-mini__img-wrap">
+            <img src="" alt="" class="product-card-mini__img">
+          </a>
+          <p class="product-card-mini__descr">Критическое мышление в эпоху постправды</p>
+        </article>
+
+        <article class="product-card-mini">
+          <h2 class="product-card-mini__title">
+            <a href="">Дао физики</a>
+          </h2>
+          <a href="" class="product-card-mini__img-wrap">
+            <img src="" alt="" class="product-card-mini__img">
+          </a>
+          <p class="product-card-mini__descr">Исследование параллелей между современной физикой и восточной философией</p>
+        </article>
+
+        <article class="product-card-mini">
+          <h2 class="product-card-mini__title">
+            <a href="">Не очевидно</a>
+          </h2>
+          <a href="" class="product-card-mini__img-wrap">
+            <img src="" alt="" class="product-card-mini__img">
+          </a>
+          <p class="product-card-mini__descr">Как выявлять тренды раньше других</p>
+        </article> -->
+    </div>
+  </div>
+
+  <div class="library__inner">
+    <div class="library">
+      <h2 class="library__title">Мы открыли для вас уютную библиотеку</h2>
+      <p class="library__location">Приходите к нам по адресу Никитская 10, каждый день с 12:00 до 18:00</p>
+    </div>
+  </div>
+</main>
+
+
+
+<footer class="page-footer">
+  <div class="page-footer__inner">
+    <div class="logo__inner">
+      <a href="#" class="logo"><img src="" alt="book store"></a>
+      <span class="logo-time">с 9:00 до 19:00</span>
+    </div>
+
+    <nav class="footer-nav">
+      <ul class="page-footer-nav__list">
+        <li class="page-footer-nav__item">
+          <a href="#" class="page-footer-nav__link">Книги</a>
+        </li>
+        <li class="page-footer-nav__item">
+          <a href="#" class="page-footer-nav__link">Рекомендации</a>
+        </li>
+        <li class="page-footer-nav__item">
+          <a href="#" class="page-footer-nav__link">Контакты</a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</footer>
+
+
+<script type="module" src="./js/script.js"></script>
+
+
+</body>
+</html>

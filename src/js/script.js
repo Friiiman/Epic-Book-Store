@@ -17,10 +17,10 @@ if (wrap) {
 
   sendRequest(dataAjax, function(responseObj){
     if (wrap.children) {
-  	  wrap.innerHTML = '';
-  	}
+      wrap.innerHTML = '';
+    }
 
-  	addToPage (responseObj.items, bookCardTemplate);
+    addToPage (responseObj.items, bookCardTemplate);
   });
 }
 
@@ -33,17 +33,17 @@ tabsArray.forEach(function(tab) {
   const link = tab.firstElementChild;
 
   link.addEventListener('click', function(event) {
-  	event.preventDefault();
-  	data.type = event.target.dataset.type;
+    event.preventDefault();
+    data.type = event.target.dataset.type;
 
-  	const dataAjax = createDataAjax();
+    const dataAjax = createDataAjax();
 
     sendRequest(dataAjax, function(responseObj){
       if (wrap.children) {
-  	    wrap.innerHTML = '';
-   	  }
+        wrap.innerHTML = '';
+       }
 
-  	  addToPage (responseObj.items, bookCardTemplate);
+      addToPage (responseObj.items, bookCardTemplate);
     });
   });
 });
@@ -51,13 +51,13 @@ tabsArray.forEach(function(tab) {
 
 // Функция подготовки url для GET запроса
 function createDataAjax () {
-	if (window.matchMedia("(min-width: 768px)").matches) {
-  	  data.perPage = 8;
-  	} else {
-  	  data.perPage = 3;
-  	}
+  if (window.matchMedia("(min-width: 768px)").matches) {
+      data.perPage = 8;
+    } else {
+      data.perPage = 3;
+    }
 
-	return `https://api.do-epixx.ru/htmlpro/bookstore/books/get/${data.page}/${data.perPage}/${data.type}`;
+  return `https://api.do-epixx.ru/htmlpro/bookstore/books/get/${data.page}/${data.perPage}/${data.type}`;
 };
 
 

@@ -1,6 +1,6 @@
 import createElement from './createElement.js';
 import bookCardTemplate from './bookCardTemplate.js';
- 
+
 
 function addToPage(dataArray, template) {
   // const booksArr = obj.books;
@@ -8,9 +8,9 @@ function addToPage(dataArray, template) {
 
 
   dataArray.forEach((book) => {
-  	const card = createElement(book, template);
+    const card = createElement(book, template);
 
-  	wrap.appendChild(card);
+    wrap.appendChild(card);
   })
   
 }

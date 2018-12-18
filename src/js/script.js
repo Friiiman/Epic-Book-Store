@@ -1,7 +1,9 @@
 import addToPage from './module/addToPage.js';
 import bookCardTemplate from './module/bookCardTemplate.js';
 import sendRequest from './module/sendRequest.js';
+import $ from './../../node_modules/jquery/dist/jquery.min.js';
 
+$('.page-main').css('color', '#f00');
 
 // Объект данных для запроса
 const data = {

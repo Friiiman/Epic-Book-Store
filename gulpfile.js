@@ -22,6 +22,8 @@ const webpackStream = require('webpack-stream');
 const ghpages = require('gh-pages');
 const path = require('path');
 
+const $ = require("jquery");
+
 // gulp.task('deploy', function(cb) {
 //   ghpages.publish(path.join(process.cwd(), 'dist'), cb);
 // });
@@ -61,6 +63,14 @@ function copyFonts() {
 }
 exports.copyFonts = copyFonts;
 
+function copyVendorsJs() {
+  return src([
+      './node_modules/picturefill/dist/picturefill.min.js',
+    ])
+    .pipe(dest(`${dir.build}js/`));
+}
+exports.copyVendorsJs = copyVendorsJs;
+
 function javascript() {
   return src(`${dir.src}js/script.js`)
     .pipe(plumber())
@@ -81,9 +91,9 @@ function javascript() {
           }
         ]
       },
-      // externals: {
-      //   jquery: 'jQuery'
-      // }
+      externals: {
+        jquery: 'jQuery'
+      }
     }))
     .pipe(dest(`${dir.build}js`))
     .pipe(uglify())
@@ -109,7 +119,7 @@ function serve() {
     open: false,
     port: 8080,
   });
-  watch(`${dir.src}scss/**/*.scss`, { delay: 100 }, styles);
+  watch(`${dir.src}scss/**/*.scss`, { delay: 500 }, styles);
   watch(`${dir.src}*.html`).on('change', series(
     copyHTML,
     browserSync.reload
@@ -127,6 +137,7 @@ exports.default = series(
     styles,
     copyHTML,
     copyImg,
+    copyVendorsJs,
     copyFonts,
     javascript
   ),

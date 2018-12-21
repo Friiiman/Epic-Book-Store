@@ -121,6 +121,18 @@ eval("__webpack_require__.r(__webpack_exports__);\nvar bookCardTemplate = {\n  w
 
 /***/ }),
 
+/***/ "./src/js/module/createDataAjax.js":
+/*!*****************************************!*\
+  !*** ./src/js/module/createDataAjax.js ***!
+  \*****************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n// Функция подготовки url для GET запроса\nvar data = {\n  page: 1,\n  perpage: 8,\n  type: ''\n};\n\nfunction createDataAjax() {\n  if (window.matchMedia(\"(min-width: 768px)\").matches) {\n    data.perPage = 8;\n  } else {\n    data.perPage = 3;\n  }\n\n  return \"https://api.do-epixx.ru/htmlpro/bookstore/books/get/\".concat(data.page, \"/\").concat(data.perPage, \"/\").concat(data.type);\n}\n\n;\n/* harmony default export */ __webpack_exports__[\"default\"] = (createDataAjax);\n\n//# sourceURL=webpack:///./src/js/module/createDataAjax.js?");
+
+/***/ }),
+
 /***/ "./src/js/module/createElement.js":
 /*!****************************************!*\
   !*** ./src/js/module/createElement.js ***!
@@ -145,6 +157,18 @@ eval("__webpack_require__.r(__webpack_exports__);\nfunction sendRequest(data, on
 
 /***/ }),
 
+/***/ "./src/js/module/tabsArray.js":
+/*!************************************!*\
+  !*** ./src/js/module/tabsArray.js ***!
+  \************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n// Слушатель на табы\nvar tabsWrap = document.querySelector('.j-tabs');\nvar tabsArray = Array.from(tabsWrap.children);\ntabsArray.forEach(function (tab) {\n  var link = tab.firstElementChild;\n  link.addEventListener('click', function (event) {\n    event.preventDefault();\n    data.type = event.target.dataset.type;\n    var dataAjax = createDataAjax();\n    sendRequest(dataAjax, function (responseObj) {\n      if (wrap.children) {\n        wrap.innerHTML = '';\n      }\n\n      addToPage(responseObj.items, bookCardTemplate);\n    });\n  });\n});\n/* harmony default export */ __webpack_exports__[\"default\"] = (tabsArray);\n\n//# sourceURL=webpack:///./src/js/module/tabsArray.js?");
+
+/***/ }),
+
 /***/ "./src/js/script.js":
 /*!**************************!*\
   !*** ./src/js/script.js ***!
@@ -153,7 +177,7 @@ eval("__webpack_require__.r(__webpack_exports__);\nfunction sendRequest(data, on
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _module_addToPage_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./module/addToPage.js */ \"./src/js/module/addToPage.js\");\n/* harmony import */ var _module_bookCardTemplate_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./module/bookCardTemplate.js */ \"./src/js/module/bookCardTemplate.js\");\n/* harmony import */ var _module_sendRequest_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./module/sendRequest.js */ \"./src/js/module/sendRequest.js\");\n/* harmony import */ var _node_modules_jquery_dist_jquery_min_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./../../node_modules/jquery/dist/jquery.min.js */ \"./node_modules/jquery/dist/jquery.min.js\");\n/* harmony import */ var _node_modules_jquery_dist_jquery_min_js__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_node_modules_jquery_dist_jquery_min_js__WEBPACK_IMPORTED_MODULE_3__);\n\n\n\n\n_node_modules_jquery_dist_jquery_min_js__WEBPACK_IMPORTED_MODULE_3___default()('.page-main').css('color', '#f00'); // Объект данных для запроса\n\nvar data = {\n  page: 1,\n  perpage: 8,\n  type: ''\n};\nvar wrap = document.querySelector(_module_bookCardTemplate_js__WEBPACK_IMPORTED_MODULE_1__[\"default\"].wrap);\n\nif (wrap) {\n  var dataAjax = createDataAjax();\n  Object(_module_sendRequest_js__WEBPACK_IMPORTED_MODULE_2__[\"default\"])(dataAjax, function (responseObj) {\n    if (wrap.children) {\n      wrap.innerHTML = '';\n    }\n\n    Object(_module_addToPage_js__WEBPACK_IMPORTED_MODULE_0__[\"default\"])(responseObj.items, _module_bookCardTemplate_js__WEBPACK_IMPORTED_MODULE_1__[\"default\"]);\n  });\n} // Слушатель на табы\n\n\nvar tabsWrap = document.querySelector('.j-tabs');\nvar tabsArray = Array.from(tabsWrap.children);\ntabsArray.forEach(function (tab) {\n  var link = tab.firstElementChild;\n  link.addEventListener('click', function (event) {\n    event.preventDefault();\n    data.type = event.target.dataset.type;\n    var dataAjax = createDataAjax();\n    Object(_module_sendRequest_js__WEBPACK_IMPORTED_MODULE_2__[\"default\"])(dataAjax, function (responseObj) {\n      if (wrap.children) {\n        wrap.innerHTML = '';\n      }\n\n      Object(_module_addToPage_js__WEBPACK_IMPORTED_MODULE_0__[\"default\"])(responseObj.items, _module_bookCardTemplate_js__WEBPACK_IMPORTED_MODULE_1__[\"default\"]);\n    });\n  });\n}); // Функция подготовки url для GET запроса\n\nfunction createDataAjax() {\n  if (window.matchMedia(\"(min-width: 768px)\").matches) {\n    data.perPage = 8;\n  } else {\n    data.perPage = 3;\n  }\n\n  return \"https://api.do-epixx.ru/htmlpro/bookstore/books/get/\".concat(data.page, \"/\").concat(data.perPage, \"/\").concat(data.type);\n}\n\n;\n\n//# sourceURL=webpack:///./src/js/script.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _module_addToPage_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./module/addToPage.js */ \"./src/js/module/addToPage.js\");\n/* harmony import */ var _module_bookCardTemplate_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./module/bookCardTemplate.js */ \"./src/js/module/bookCardTemplate.js\");\n/* harmony import */ var _module_sendRequest_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./module/sendRequest.js */ \"./src/js/module/sendRequest.js\");\n/* harmony import */ var _module_tabsArray_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./module/tabsArray.js */ \"./src/js/module/tabsArray.js\");\n/* harmony import */ var _module_createDataAjax_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./module/createDataAjax.js */ \"./src/js/module/createDataAjax.js\");\n/* harmony import */ var _node_modules_jquery_dist_jquery_min_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./../../node_modules/jquery/dist/jquery.min.js */ \"./node_modules/jquery/dist/jquery.min.js\");\n/* harmony import */ var _node_modules_jquery_dist_jquery_min_js__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_node_modules_jquery_dist_jquery_min_js__WEBPACK_IMPORTED_MODULE_5__);\n\n\n\n\n\n\n_node_modules_jquery_dist_jquery_min_js__WEBPACK_IMPORTED_MODULE_5___default()('.page-main').css('color', '#f00'); // Объект данных для запроса\n// const data = {\n//   page: 1,\n//   perpage: 8,\n//   type: ''\n// };\n\nvar wrap = document.querySelector(_module_bookCardTemplate_js__WEBPACK_IMPORTED_MODULE_1__[\"default\"].wrap);\n\nif (wrap) {\n  var dataAjax = Object(_module_createDataAjax_js__WEBPACK_IMPORTED_MODULE_4__[\"default\"])();\n  Object(_module_sendRequest_js__WEBPACK_IMPORTED_MODULE_2__[\"default\"])(dataAjax, function (responseObj) {\n    if (wrap.children) {\n      wrap.innerHTML = '';\n    }\n\n    Object(_module_addToPage_js__WEBPACK_IMPORTED_MODULE_0__[\"default\"])(responseObj.items, _module_bookCardTemplate_js__WEBPACK_IMPORTED_MODULE_1__[\"default\"]);\n  });\n} // Слушатель на табы\n// const tabsWrap = document.querySelector('.j-tabs');\n// const tabsArray = Array.from(tabsWrap.children);\n// tabsArray.forEach(function(tab) {\n//   const link = tab.firstElementChild;\n//   link.addEventListener('click', function(event) {\n//     event.preventDefault();\n//     data.type = event.target.dataset.type;\n//     const dataAjax = createDataAjax();\n//     sendRequest(dataAjax, function(responseObj){\n//       if (wrap.children) {\n//         wrap.innerHTML = '';\n//        }\n//       addToPage (responseObj.items, bookCardTemplate);\n//     });\n//   });\n// });\n// Функция подготовки url для GET запроса\n// function createDataAjax () {\n//   if (window.matchMedia(\"(min-width: 768px)\").matches) {\n//       data.perPage = 8;\n//     } else {\n//       data.perPage = 3;\n//     }\n//   return `https://api.do-epixx.ru/htmlpro/bookstore/books/get/${data.page}/${data.perPage}/${data.type}`;\n// };\n\n//# sourceURL=webpack:///./src/js/script.js?");
 
 /***/ })
 

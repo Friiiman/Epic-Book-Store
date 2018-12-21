@@ -71,6 +71,26 @@ function copyVendorsJs() {
 }
 exports.copyVendorsJs = copyVendorsJs;
 
+
+
+// function copySlickJs() {
+//   return src([
+//       './node_modules/slick-carousel/slick/slick.min.js',
+//     ])
+//     .pipe(dest(`${dir.src}js/module/`));
+// }
+// exports.copySlickJs = copySlickJs;
+
+// function copySlickScss() {
+//   return src([
+//       './node_modules/slick-carousel/slick/slick.scss',
+//     ])
+//     .pipe(dest(`${dir.src}scss/blocks/`));
+// }
+// exports.copySlickScss = copySlickScss;
+
+
+
 function javascript() {
   return src(`${dir.src}js/script.js`)
     .pipe(plumber())
@@ -138,6 +158,8 @@ exports.default = series(
     copyHTML,
     copyImg,
     copyVendorsJs,
+    // copySlickJs,
+    // copySlickScss,
     copyFonts,
     javascript
   ),

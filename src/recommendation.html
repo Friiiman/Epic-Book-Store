@@ -8,6 +8,8 @@
   <script>
     document.documentElement.className = document.documentElement.className.replace('no-js', 'js');
   </script>
+  <script src="js/svg4everybody.min.js"></script>
+  <script>svg4everybody();</script>
 </head>
 <body>
 
@@ -45,56 +47,51 @@
   <section class="recommendation">
     <h2 class="recommendation__title">Наши рекомендации</h2>
     <div class="recommendation__articles">
+      <article class="recommendation__article">
+        <h2 class="recommendation__article__title"></h2>
+        <p class="recommendation__article__description"></p>
+        <a href="#" class="recommendation__article__link"></a>
+      </article>
 
-      <div class="recommendation__articles-left">
-        <article class="recommendation__article">
-          <h2 class="recommendation__article__title"></h2>
-          <p class="recommendation__article__description"></p>
-          <a href="#" class="recommendation__article__link"></a>
-        </article>
-        <article class="recommendation__article-img">
-          <h2 class="recommendation__article-img__title"></h2>
-        </article>
-      </div>
+      <article class="recommendation__article-img">
+        <h2 class="recommendation__article-img__title"></h2>
+      </article>
 
-      <div class="recommendation__articles-right">
-        <article class="recommendation__article-img">
-          <h2 class="recommendation__article-img__title"></h2>
-          <p class="recommendation__article-img__description"></p>
-        </article>
-        <article class="recommendation__article">
-          <h2 class="recommendation__article__title"></h2>
-          <p class="recommendation__article__description"></p>
-          <button class="recommendation__article__button"></button>
-        </article>
-        <article class="recommendation__article-pink">
-          <h2 class="recommendation__article-colored__title"></h2>
-          <p class="recommendation__article-colored__description"></p>
-        </article>
-      </div>
+      <article class="recommendation__article-img">
+        <h2 class="recommendation__article-img__title"></h2>
+        <p class="recommendation__article-img__description"></p>
+      </article>
 
-      <div class="recommendation__articles-bottom">
-        <article class="recommendation__article-img">
-          <h2 class="recommendation__article-img__title"></h2>
-          <p class="recommendation__article-img__description"></p>
-        </article>
-      </div>
+      <article class="recommendation__article">
+        <h2 class="recommendation__article__title"></h2>
+        <p class="recommendation__article__description"></p>
+        <button class="recommendation__article__button"></button>
+      </article>
 
+      <article class="recommendation__article-pink">
+        <h2 class="recommendation__article-colored__title"></h2>
+        <p class="recommendation__article-colored__description"></p>
+      </article>
+
+      <article class="recommendation__article-img">
+        <h2 class="recommendation__article-img__title"></h2>
+        <p class="recommendation__article-img__description"></p>
+      </article>
     </div>
 
-    <div class="recommendation__book-gift">
+    <article class="recommendation__book-gift">
       <h3 class="recommendation__book-gift__title">Книга в подарок!</h3>
       <span class="recommendation__book-gift__description">При вашем новом заказе мы подарим вам книгу</span>
       <article class="product-card-mini">
-          <h2 class="product-card-mini__title">
-            <a href="">Путиводитель по лжи</a>
-          </h2>
-          <a href="" class="product-card-mini__img-wrap">
-            <img src="" alt="Обложка книги" class="product-card-mini__img">
-          </a>
-          <p class="product-card-mini__descr">Критическое мышление в эпоху постправды</p>
-        </article>
-    </div>
+        <h2 class="product-card-mini__title">
+          <a href="">Путиводитель по лжи</a>
+        </h2>
+        <a href="" class="product-card-mini__img-wrap">
+          <img src="" alt="Обложка книги" class="product-card-mini__img">
+        </a>
+        <p class="product-card-mini__descr">Критическое мышление в эпоху постправды</p>
+      </article>
+    </article>
   </section>
 
 

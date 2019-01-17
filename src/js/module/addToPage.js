@@ -12,7 +12,7 @@ function addToPage(dataArray, template) {
 
     wrap.appendChild(card);
   })
-  
+
 }
 
 export default addToPage;

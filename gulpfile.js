@@ -24,11 +24,7 @@ const path = require('path');
 const svgstore = require('gulp-svgstore');
 const svgmin = require('gulp-svgmin');
 
-const $ = require("jquery");
-
-// gulp.task('deploy', function(cb) {
-//   ghpages.publish(path.join(process.cwd(), 'dist'), cb);
-// });
+const $ = require('jquery');
 
 function styles() {
   return src(`${dir.src}scss/style.scss`)
@@ -36,7 +32,7 @@ function styles() {
     .pipe(sourcemaps.init())
     .pipe(sass())
     .pipe(postcss([
-      autoprefixer({browsers: ['last 2 version']}),
+      autoprefixer({browsers: ['last 2 version'], grid: true}),
     ]))
     .pipe(sourcemaps.write('/'))
     .pipe(dest(`${dir.build}css/`))
@@ -89,26 +85,6 @@ function copyVendorsJs() {
 }
 exports.copyVendorsJs = copyVendorsJs;
 
-// ----------------------------------------------------
-
-// function copySlickJs() {
-//   return src([
-//       './node_modules/slick-carousel/slick/slick.min.js',
-//     ])
-//     .pipe(dest(`${dir.build}js/`));
-// }
-// exports.copySlickJs = copySlickJs;
-
-// function copySlickScss() {
-//   return src([
-//       './node_modules/slick-carousel/slick/slick.scss',
-//     ])
-//     .pipe(dest(`${dir.src}scss/blocks/`));
-// }
-// exports.copySlickScss = copySlickScss;
-
-// ----------------------------------------------------
-
 function javascript() {
   return src(`${dir.src}js/script.js`)
     .pipe(plumber())
@@ -139,6 +115,34 @@ function javascript() {
     .pipe(dest(`${dir.build}js`));
 }
 exports.javascript = javascript;
+
+// ----------------------------------------------------
+
+// function copyJquery() {
+//   return src([
+//       './node_modules/jquery/dist/jquery.min.js',
+//     ])
+//     .pipe(dest(`${dir.src}js/`));
+// }
+// exports.copyJquery = copyJquery;
+
+// function copySlickJs() {
+//   return src([
+//       './node_modules/slick-carousel/slick/slick.min.js',
+//     ])
+//     .pipe(dest(`${dir.src}js/module/`));
+// }
+// exports.copySlickJs = copySlickJs;
+
+// function copySlickScss() {
+//   return src([
+//       './node_modules/slick-carousel/slick/slick.scss',
+//     ])
+//     .pipe(dest(`${dir.src}scss/blocks/`));
+// }
+// exports.copySlickScss = copySlickScss;
+
+// ----------------------------------------------------
 
 function clean() {
   return del(dir.build)
@@ -181,6 +185,7 @@ exports.default = series(
     copyImg,
     buildSvgSprite,
     copyVendorsJs,
+    // copyJquery,
     // copySlickJs,
     // copySlickScss,
     copyFonts,

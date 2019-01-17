@@ -1,0 +1,41 @@
+.pagination {
+  padding: 0 60px 60px;
+
+  &__item {
+    display: inline-block;
+    padding-bottom: 3px;
+  }
+
+  &__link {
+    width: 30px;
+    height: 30px;
+    font-weight: 700;
+    color: #000;
+    background-color: transparent;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+
+    &:hover {
+      background-color: $second-color-light;
+    }
+
+    &:active {
+      background-color: transparent;
+      color: #afafaf;
+    }
+
+    &--active {
+      color: $second-color;
+      background-color: $second-color-light;
+    }
+  }
+
+  @media (min-width: $screen-m) {
+    padding: 0 110px 60px;
+  }
+
+  @media (min-width: $screen-m) {
+    padding: 0 55px 60px;
+  }
+}

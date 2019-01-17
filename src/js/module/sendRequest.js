@@ -12,7 +12,7 @@ function sendRequest(data, onSuccess) {
       onSuccess(responseObj);
 
   	} else {
-  	  console.log(`Жду загрузки: + ${xhr.readyState}`);
+  	  // console.log(`Жду загрузки: + ${xhr.readyState}`);
   	}
   }
 };

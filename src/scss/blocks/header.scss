@@ -1,29 +1,96 @@
 .page-header {
-  background-color: #fff;
+  background-color: $header-color;
 
   &__inner {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    padding: 16px 30px 13px;
+    align-items: center;
   }
 }
 
 .logo {
+  font-weight: 700;
 
   &__inner {
+    width: auto;
     display: flex;
     flex-wrap: wrap;
+  }
+
+  &__time {
+    display: none;
+    font-size: 14px;
+    color: $gray-dark;
   }
 }
 
 .main-nav {
+  display: flex;
+  align-items: center;
+  position: relative;
+  z-index: 10;
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: absolute;
+    padding: 19px 23px 19px 50px;
+    width: 195px;
+    height: 140px;
+    // top: 38px;
+    top: -156px;
+    left: -116px;
+    text-align: left;
+    opacity: 0;
+    background-color: rgba(244, 212, 228, 0.8);
+    transition: all linear 0.3s;
+  }
 
   &__item {
     display: inline-block;
   }
 
+  .phone--blue {
+    position: absolute;
+    left: -25px;
+    top: 2px;
+  }
+
+  &__link {
+    position: relative;
+    font-size: 14px;
+    font-weight: 700;
+
+    &-phone {
+      color: #1a1ff7;
+    }
+
+    &--active {
+      color: $second-color;
+    }
+  }
+
+  &__inner {
+    order: -1;
+  }
+
+  &__button {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+
+    &--phone {
+      display: none;
+    }
+  }
+
+  // ---------BurgerMenu---------
   &__toggle {
     position: relative;
+    margin-left: 18px;
     background-color: transparent;
     border: none;
     width: 20px;
@@ -71,68 +138,132 @@
       background-color: #000;
     }
   }
+
+  &__toggle-close {
+    position: relative;
+    margin-left: 18px;
+    background-color: transparent;
+    border: none;
+    width: 20px;
+    height: 13px;
+    right: 0;
+    cursor: pointer;
+
+    &:before,
+    &:after {
+      content: '';
+      position: absolute;
+      left: 0;
+      width: 100%;
+      height: 2px;
+      background-color: #000;
+    }
+
+    &:before {
+      transform: rotate(45deg);
+    }
+
+    &:after {
+      transform: rotate(-45deg);
+    }
+
+    &-name {
+      position: absolute;
+      left: 0;
+      top: 0;
+      bottom: 0;
+      margin: auto;
+      font-size: 0;
+    }
+  }
 }
 
-@media (min-width: $screen-s) {
+.menu-open {
+  top: 38px;
+  opacity: 1;
+}
 
-  .page-header__inner {
-    padding: 16px 10px 13px;
-  }
-
-  .logo {
-
-    &-time {
-      display: none;
-    }
-  }
-
-  .main-nav {
-
-    &__list {
-      display: none;
-    }
-
-    &__button--phone {
-      display: none;
-    }
-  }
+.burger-hide {
+  display: none;
 }
 
 @media (min-width: $screen-m) {
 
-  .page-header__inner {
-    padding: 22px 4px 20px;
+  .page-header {
+
+    &__inner {
+      padding: 18px 40px 20px;
+    }
   }
 
   .logo {
+    padding-right: 30px;
 
-    &-time {
+    &__inner {
+      width: 260px;
+    }
+
+    &__time {
       display: inline-block;
-      width: 105px;
     }
   }
 
   .main-nav {
 
-    &__toggle {
+    &__inner {
+      display: flex;
+    }
+
+    &__toggle,
+    &__toggle-close {
       display: none;
     }
 
     &__list {
-      display: inline-block;
+      flex-direction: row;
+      position: relative;
+      padding: 0 35px 0 0;
+      width: 300px;
+      height: auto;
+      top: 0;
+      left: 0;
+      background-color: transparent;
+      opacity: 1;
     }
 
-    &__button--phone {
-      display: block;
+    &__item {
+
+      &:last-child {
+        display: none;
+      }
+    }
+
+    &__button {
+      width: 60px;
+
+      &--phone {
+        display: block;
+      }
     }
   }
 }
 
 @media (min-width: $screen-l) {
 
-  .page-header__inner {
-    width: 1160px;
-    padding: 22px 0 20px;
-    margin: 0 auto;
+  .page-header {
+
+    &__inner {
+      width: 1280px;
+      margin: 0 auto;
+      padding: 18px 60px;
+    }
+  }
+
+  .main-nav {
+
+    &__list {
+      padding-right: 80px;
+      width: 350px;
+    }
   }
 }

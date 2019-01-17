@@ -41,6 +41,7 @@
     "path": "^0.12.7",
     "picturefill": "^3.0.3",
     "stylelint": "^9.9.0",
+    "swiper": "^4.4.6",
     "webpack": "^4.27.1",
     "webpack-stream": "^5.2.1"
   },

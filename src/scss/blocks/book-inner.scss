@@ -1,0 +1,73 @@
+.book-purchase__inner {
+  padding: 40px 30px 80px;
+
+  @media (min-width: $screen-m) {
+    padding: 40px 40px 80px;
+  }
+
+  @media (min-width: $screen-l) {
+    padding: 40px 60px 80px;
+    width: 1280px;
+    margin: 0 auto;
+  }
+}
+
+.book-purchase {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-areas:
+    'book-purchase__about'
+    'book-purchase__img'
+    'book-purchase__main'
+    'book-purchase__form'
+    'book-purchase__description';
+
+  @media (min-width: $screen-m) {
+    grid-template-columns: 3fr 5fr;
+    grid-column-gap: 40px;
+    grid-template-areas:
+      'book-purchase__img           book-purchase__about'
+      'book-purchase__img           book-purchase__main'
+      'book-purchase__pages         book-purchase__form'
+      'book-purchase__description   book-purchase__description';
+  }
+
+  @media (min-width: $screen-l) {
+    grid-template-columns: 2fr 4fr 6fr;
+    grid-column-gap: 40px;
+    grid-template-areas:
+      'book-purchase__pages   book-purchase__img           book-purchase__about'
+      'book-purchase__pages   book-purchase__img           book-purchase__main'
+      'book-purchase__pages   book-purchase__img           book-purchase__form'
+      '.                      book-purchase__description   book-purchase__description';
+  }
+
+  &__img {
+    grid-area: book-purchase__img;
+  }
+
+  &__pages {
+    display: none;
+    grid-area: book-purchase__pages;
+
+    @media (min-width: $screen-m) {
+      display: block;
+    }
+  }
+
+  &__about {
+    grid-area: book-purchase__about;
+  }
+
+  &__main {
+    grid-area: book-purchase__main;
+  }
+
+  &__form__inner {
+    grid-area: book-purchase__form;
+  }
+}
+
+.book-purchase__description__inner {
+  grid-area: book-purchase__description;
+}

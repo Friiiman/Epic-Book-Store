@@ -1,0 +1,46 @@
+.library {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &__inner {
+    background-image: url(./../img/book-store/library.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top 0 right -480px;
+    padding: 38px 35px 50px;
+
+    @media (min-width: 600px) {
+      background-position: center;
+    }
+
+    @media (min-width: $screen-m) {
+      padding: 65px 80px 75px;
+    }
+
+    @media (min-width: $screen-l) {
+      padding: 60px 230px 115px;
+    }
+  }
+
+  &__shape {
+    margin-bottom: 40px;
+  }
+
+  &__title,
+  &__location {
+    margin: 0;
+    text-align: center;
+    line-height: 1.7;
+    color: $library-text-color;
+  }
+
+  &__title {
+    padding-bottom: 30px;
+
+    @media (min-width: $screen-m) {
+      font-size: 30px;
+      line-height: 1.4;
+    }
+  }
+}

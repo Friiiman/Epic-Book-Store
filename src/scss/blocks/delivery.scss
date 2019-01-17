@@ -1,0 +1,122 @@
+.delivery {
+  padding: 0 10px 70px;
+
+  &__inner {
+    position: relative;
+    border: 8px solid $gray-lighten;
+    padding: 0 13px;
+
+    @media (min-width: $screen-m) {
+      padding: 0 20px;
+    }
+
+    @media (min-width: $screen-l) {
+      margin: 0 auto;
+      padding: 0 10px;
+      width: 1160px;
+    }
+
+    &:before {
+      content: '';
+      position: absolute;
+      top: -8px;
+      left: 15%;
+      width: 40%;
+      height: 8px;
+      background-color: $main-color;
+
+      @media (min-width: $screen-m) {
+        left: 5%;
+      }
+
+      @media (min-width: $screen-l) {
+        left: 50px;
+        width: 400px;
+      }
+    }
+
+    &:after {
+      content: '';
+      position: absolute;
+      bottom: -8px;
+      right: 15%;
+      width: 40%;
+      height: 8px;
+      background-color: $main-color;
+
+      @media (min-width: $screen-m) {
+        right: 5%;
+      }
+
+      @media (min-width: $screen-l) {
+        right: 50px;
+        width: 740px;
+      }
+    }
+  }
+
+  &__title {
+    margin: 0;
+    padding-top: 35px;
+    padding-bottom: 20px;
+
+    @media (min-width: $screen-l) {
+      font-size: 30px;
+    }
+  }
+
+  &__list {
+    padding: 0 20px;
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 50px;
+
+    &:last-child {
+      padding-bottom: 50px;
+    }
+
+    &-text {
+      margin: 0;
+      padding-top: 30px;
+      text-align: center;
+    }
+  }
+
+  @media (min-width: $screen-m) {
+    padding: 0 40px 70px;
+
+    &__list {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+    }
+
+    &__item {
+      width: 40%;
+
+      &:nth-child(odd) {
+        margin-right: 15%;
+      }
+    }
+  }
+
+  @media (min-width: $screen-l) {
+
+    &__item {
+      width: 250px;
+      padding-right: 10px;
+
+      &:nth-child(odd) {
+        margin-right: auto;
+      }
+
+      &:last-child {
+        padding-right: 0;
+      }
+    }
+  }
+}

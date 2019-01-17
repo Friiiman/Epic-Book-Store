@@ -17,26 +17,44 @@
 <header class="page-header">
   <div class="page-header__inner">
     <div class="logo__inner">
-      <a href="#" class="logo"><img src="" alt="Логотип магазина"></a>
-      <span class="logo-time">с 9:00 до 19:00</span>
+      <span href="#" class="logo">BOOK STORE</span>
+      <span class="logo__time">с 9:00 до 19:00</span>
     </div>
 
     <nav class="main-nav">
-      <button class="main-nav__toggle">Главное меню</button>
-      <ul class="main-nav__list">
-        <li class="main-nav__item">
-          <a href="#" class="main-nav__link">Книги</a>
-        </li>
-        <li class="main-nav__item">
-          <a href="#" class="main-nav__link">Рекомендации</a>
-        </li>
-        <li class="main-nav__item">
-          <a href="#" class="main-nav__link">Контакты</a>
-        </li>
-      </ul>
-      <div class="main-nav__button">
-        <a href="#" class="main-nav__button--basket"></a>
-        <a href="#" class="main-nav__button--phone"></a>
+      <button id="burger" class="main-nav__toggle"><span class="main-nav__toggle-name">Главное меню</span></button>
+      <button id="burger-close" class="main-nav__toggle-close burger-hide"><span class="main-nav__toggle-close-name">Главное меню</span></button>
+      <div class="main-nav__inner">
+        <ul class="main-nav__list">
+          <li class="main-nav__item">
+            <a href="#" class="main-nav__link">книги</a>
+          </li>
+          <li class="main-nav__item">
+            <a href="#" class="main-nav__link">рекомендации</a>
+          </li>
+          <li class="main-nav__item">
+            <a href="#" class="main-nav__link main-nav__link--active">контакты</a>
+          </li>
+          <li class="main-nav__item">
+            <a href="phone:88005008020" class="main-nav__link main-nav__link-phone">
+              <svg width="16" height="16" class="phone--blue">
+                <use xlink:href="img/sprite.svg#item-phone--blue"></use>
+              </svg> 8 800 500-80-20
+            </a>
+          </li>
+        </ul>
+        <div class="main-nav__button">
+          <a href="#" class="main-nav__button--cart">
+            <svg width="21" height="21">
+              <use xlink:href="img/sprite.svg#item-cart"></use>
+            </svg>
+          </a>
+          <a href="#" class="main-nav__button--phone">
+            <svg width="21" height="21">
+              <use xlink:href="img/sprite.svg#item-phone"></use>
+            </svg>
+          </a>
+        </div>
       </div>
     </nav>
   </div>
@@ -47,37 +65,56 @@
 <main class="page-main">
   <section class="contacts">
     <div class="contacts__inner">
-      <h1 class="cintacts__title">Контакты</h1>
-      <div class="contacts__map__inner">
+      <div class="contacts__description__inner">
+        <h1 class="contacts__description-title">Контакты</h1>
 
-        <div class="contacts__map-description">
-          <span class="contacts__map-location">Набережная реки Фонтанки, 202</span>
-          <span class="contacts__map-time">с 9:00 до 19:00 ежедневно</span>
-          <a href="phone:89111234567" class="contacts__map-phone">+7 (911) 123 45 67</a>
+        <div class="contacts__description">
+          <ul class="contacts__description__list">
+            <li class="contacts__description__item">
+              <span class="contacts__description__item-location">Набережная реки Фонтанки, 202</span>
+            </li>
+            <li class="contacts__description__item">
+              <span class="contacts__description__item-time">с 9:00 до 19:00 ежедневно</span>
+            </li>
+            <li class="contacts__description__item">
+              <a href="phone:89111234567" class="contacts__description__item-phone">+7 (911) 123 45 67</a>
+            </li>
+          </ul>
         </div>
-
-        <div class="contacts__map">
-        </div>
-
       </div>
 
+      <div id="map" class="map"></div>
 
-      <div class="form__inner">
-        <form id="form" action="" class="form">
-          <h2 class="form__title">Есть вопросы?</h2>
-          <p class="form__text">Напишите нам на почту. Отвечаем в течении дня</p>
-          <input type="text" value="Ваша почта" class="form__mail">
-          <input type="text" value="Сообщение" class="form__message">
-          <input id="agree" type="checkbox" class="form__checkbox">
-          <label for="agree" class="form__checkbox-text">Я согласен(-на) с <a href="#">политикой конфиденциальности</a> и <a href="#">правилами обработки данных</a></label>
-        </form>
-        <input form="form" type="submit" value="Отправить" class="form__submit">
+      <div class="contacts__form">
+        <div class="form__inner contacts__form__inner">
+          <form id="form" action="" class="form">
+            <h2 class="form__title">Есть вопросы?</h2>
+            <p class="form__text">Напишите нам на почту. Отвечаем в течении дня</p>
+
+              <input type="email" placeholder="Ваша почта" class="form__mail contacts__form__mail">
+              <input type="text" placeholder="Сообщение" class="form__message contacts__form__message">
+
+              <!-- <input form="form" type="submit" value="Отправить" class="form__submit contacts__form__submit"> -->
+
+              <label class="checkbox__inner">
+                <div class="checkbox-wrap">
+                  <input id="checkbox" type="checkbox" class="checkbox">
+                </div>
+                <span class="checkbox__text">Я согласен(-на) с <a href="#" class="checkbox__link">политикой конфиденциальности</a> и <a href="#" class="checkbox__link">правилами обработки данных</a></span>
+              </label>
+
+          </form>
+          <input form="form" type="submit" value="Отправить" class="form__submit contacts__form__submit">
+        </div>
       </div>
     </div>
   </section>
 
   <div class="library__inner">
     <div class="library">
+      <svg width="101" height="14" class="library__shape">
+        <use xlink:href="img/sprite.svg#shape"></use>
+      </svg>
       <h2 class="library__title">Мы открыли для вас уютную библиотеку</h2>
       <p class="library__location">Приходите к нам по адресу Никитская 10, каждый день с 12:00 до 18:00</p>
     </div>
@@ -88,12 +125,12 @@
 
 <footer class="page-footer">
   <div class="page-footer__inner">
-    <div class="logo__inner">
-      <a href="#" class="logo"><img src="" alt="Логотип магазина"></a>
-      <span class="logo-time">с 9:00 до 19:00</span>
+    <div class="page-footer-logo__inner">
+      <span href="#" class="logo">BOOK STORE</span>
+      <span class="page-footer-logo__time">с 9:00 до 19:00</span>
     </div>
 
-    <nav class="footer-nav">
+    <nav class="page-footer-nav">
       <ul class="page-footer-nav__list">
         <li class="page-footer-nav__item">
           <a href="#" class="page-footer-nav__link">Книги</a>
@@ -111,6 +148,34 @@
 
 
 <script type="module" src="./js/script.js"></script>
+
+<script src="https://api-maps.yandex.ru/2.1/?&lang=ru_RU" type="text/javascript"></script>
+
+<script type="text/javascript">
+  // Функция ymaps.ready() будет вызвана, когда
+  // загрузятся все компоненты API, а также когда будет готово DOM-дерево.
+  ymaps.ready(init);
+  function init(){
+    // Создание карты.
+    const myMap = new ymaps.Map("map", {
+      // Координаты центра карты.
+      // Порядок по умолчанию: «широта, долгота».
+      // Чтобы не определять координаты центра карты вручную,
+      // воспользуйтесь инструментом Определение координат.
+      center: [59.923061, 30.311150],
+      // Уровень масштабирования. Допустимые значения:
+      // от 0 (весь мир) до 19.
+      zoom: 15.5,
+      controls: ['smallMapDefaultSet']
+  });
+  const myIcon = new ymaps.Placemark([59.921798, 30.311667], {}, {
+    iconLayout: 'default#image',
+    iconImageHref: 'img/book-store/geotag.png',
+    iconImageSize: [20, 26],
+  });
+  myMap.geoObjects.add(myIcon)
+  }
+</script>
 
 
 </body>

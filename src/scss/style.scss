@@ -1,4 +1,32 @@
 @import 'variables';
 
+@import 'blocks/fonts';
 @import 'blocks/page';
+
+@import './../../node_modules/slick-carousel/slick/slick.scss';
+
+// -------single/duplicate elements-------
 @import 'blocks/header';
+@import 'blocks/footer';
+@import 'blocks/news';
+@import 'blocks/form';
+@import 'blocks/library';
+
+// -------index.html-------
+@import 'blocks/promo';
+@import 'blocks/slider';
+@import 'blocks/catalog';
+@import 'blocks/tabs';
+@import 'blocks/productCardMini';
+@import 'blocks/pagination';
+@import 'blocks/delivery';
+
+// -------contacts.html-------
+@import 'blocks/contacts';
+
+// -------bookInner.html-------
+@import 'blocks/book-inner';
+@import 'blocks/book-purchase';
+
+// ------recommendation.html------
+@import 'blocks/recommendation';

@@ -4,7 +4,6 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Документ</title>
-  <!-- <link rel="stylesheet" type="text/css" href="css/slick.css"> -->
   <link rel="stylesheet" type="text/css" href="css/style.css">
   <script>
     document.documentElement.className = document.documentElement.className.replace('no-js', 'js');
@@ -19,11 +18,12 @@
   <div class="page-header__inner">
     <div class="logo__inner">
       <span href="#" class="logo">BOOK STORE</span>
-      <span class="logo-time">с 9:00 до 19:00</span>
+      <span class="logo__time">с 9:00 до 19:00</span>
     </div>
 
     <nav class="main-nav">
-      <button class="main-nav__toggle"><span class="main-nav__toggle-name">Главное меню</span></button>
+      <button id="burger" class="main-nav__toggle"><span class="main-nav__toggle-name">Главное меню</span></button>
+      <button id="burger-close" class="main-nav__toggle-close burger-hide"><span class="main-nav__toggle-close-name">Главное меню</span></button>
       <div class="main-nav__inner">
         <ul class="main-nav__list">
           <li class="main-nav__item">
@@ -35,10 +35,24 @@
           <li class="main-nav__item">
             <a href="#" class="main-nav__link">контакты</a>
           </li>
+          <li class="main-nav__item">
+            <a href="phone:88005008020" class="main-nav__link main-nav__link-phone">
+              <svg width="16" height="16" class="phone--blue">
+                <use xlink:href="img/sprite.svg#item-phone--blue"></use>
+              </svg> 8 800 500-80-20</a>
+          </li>
         </ul>
         <div class="main-nav__button">
-          <a href="#" class="main-nav__button--basket"></a>
-          <a href="#" class="main-nav__button--phone"></a>
+          <a href="#" class="main-nav__button--cart">
+            <svg width="21" height="21">
+              <use xlink:href="img/sprite.svg#item-cart"></use>
+            </svg>
+          </a>
+          <a href="#" class="main-nav__button--phone">
+            <svg width="21" height="21">
+              <use xlink:href="img/sprite.svg#item-phone"></use>
+            </svg>
+          </a>
         </div>
       </div>
     </nav>
@@ -53,34 +67,55 @@
       <div class="promo__inner">
         <div class="promo__slider">
 
-          <div class="book-card-big">
+          <div class="slider__inner">
 
-            <div class="slider__inner j-slider">
+            <div class="slider j-slider">
               <article class="slider__item">
-                <div class="slider__item-text">
+                <div class="slider__item__inner">
                   <p class="slider__item-about">Новое поступление книги &laquo;Симпсоны и их математические секреты&raquo;</p>
-                  <h2 class="slider__item-descr">Для поклонников сериала &laquo;Симпсоны&raquo; и для всех, кому интересна математика.</h2>
-                  <a href="#" class="slider__item-link">Хочу узнать о книге больше</a>
+                  <div class="slider__item-text">
+                    <h2 class="slider__item-descr">Для поклонников сериала &laquo;Симпсоны&raquo; и для всех, кому интересна математика.</h2>
+                    <a href="#" class="slider__item-link">Хочу узнать о книге больше</a>
+                  </div>
                 </div>
-                <a href="#"><img src="img/book-store/books_all/simpsony-i-ikh-matematicheskie-sekrety.png" alt="Обложка книги" class="slider__item-img"></a>
+                <a href="#" class="slider__item-img__link">
+                  <picture>
+                    <source media="(min-width: 1280px)" srcset="img/book-store/books_all/simpsony-i-ikh-matematicheskie-sekrety.png">
+                    <img src="img/book-store/books_all/simpsony-i-ikh-matematicheskie-sekrety_2x.png" alt="Обложка книги" class="slider__item-img">
+                  </picture>
+                </a>
               </article>
 
-              <article class="slider__item j-slider">
-                <div class="slider__item-text">
+              <article class="slider__item">
+                <div class="slider__item__inner">
                   <p class="slider__item-about">Новое поступление книги &laquo;45 татуировок менеджера&raquo;</p>
-                  <h2 class="slider__item-descr">Книга про правила российского руководителя</h2>
-                  <a href="#" class="slider__item-link">Хочу узнать о книге больше</a>
+                  <div class="slider__item-text">
+                    <h2 class="slider__item-descr">Книга про правила российского руководителя</h2>
+                    <a href="#" class="slider__item-link">Хочу узнать о книге больше</a>
+                  </div>
                 </div>
-                <a href="#"><img src="img/book-store/books_all/45-tatuirovok-prodavana.png" alt="Обложка книги" class="slider__item-img"></a>
+                <a href="#" class="slider__item-img__link">
+                  <picture>
+                    <source media="(min-width: 1280px)" srcset="img/book-store/books_all/45-tatuirovok-prodavana.png">
+                    <img src="img/45-tatuirovok-prodavana_2x.png" alt="Обложка книги" class="slider__item-img">
+                  </picture>
+                </a>
               </article>
 
-              <article class="slider__item j-slider">
-                <div class="slider__item-text">
+              <article class="slider__item">
+                <div class="slider__item__inner">
                   <p class="slider__item-about">Узнайте как обучить персонал с новой книгой &laquo;Пятая дисциплина&raquo;</p>
-                  <h2 class="slider__item-descr">Искусство и практика обучающейся организации</h2>
-                  <a href="#" class="slider__item-link">Хочу узнать о книге больше</a>
+                  <div class="slider__item-text">
+                    <h2 class="slider__item-descr">Искусство и практика обучающейся организации</h2>
+                    <a href="#" class="slider__item-link">Хочу узнать о книге больше</a>
+                  </div>
                 </div>
-                <a href="#"><img src="img/book-store/books_all/pyataya-distsiplina.png" alt="Обложка книги" class="slider__item-img"></a>
+                <a href="#" class="slider__item-img__link">
+                  <picture>
+                    <source media="(min-width: 1280px)" srcset="img/book-store/books_all/pyataya-distsiplina.png">
+                    <img src="img/4pyataya-distsiplina_2x.png" alt="Обложка книги" class="slider__item-img">
+                  </picture>
+                </a>
               </article>
             </div>
 
@@ -90,78 +125,76 @@
       </div>
     </div>
 
+
     <section class="catalog">
       <div class="catalog__inner">
         <h1 class="catalog__title">Каталог книг</h1>
-      </div>
 
-      <div class="tabs">
-        <ul class="tabs__inner j-tabs">
-          <li class="tab-item">
-            <a href="#" data-type="" class="tab-link">Все</a>
-          </li>
-          <li class="tab-item">
-            <a href="#" data-type="marketing" class="tab-link">Маркетинг</a>
-          </li>
-          <li class="tab-item">
-            <a href="#" data-type="science" class="tab-link">Научпоп</a>
-          </li>
-          <li class="tab-item">
-            <a href="#" data-type="business" class="tab-link">Бизнес</a>
-          </li>
-          <li class="tab-item">
-            <a href="#" data-type="creativity" class="tab-link">Творчество</a>
-          </li>
-          <!-- <li class="tab-item">
-            <a href="#" class="tab-link">ТочноНеБизнес</a>
-          </li> -->
-        </ul>
-       </div>
-
-      <div class="catalog__list-wrap">
-        <div class="catalog__list j-catalog-list">
+        <div class="tabs">
+          <ul class="tabs__inner j-tabs">
+            <li class="tabs-item">
+              <a href="#" data-type="" class="tabs-link tabs-link--active">Все</a>
+            </li>
+            <li class="tabs-item">
+              <a href="#" data-type="marketing" class="tabs-link">Маркетинг</a>
+            </li>
+            <li class="tabs-item">
+              <a href="#" data-type="science" class="tabs-link">Научпоп</a>
+            </li>
+            <li class="tabs-item">
+              <a href="#" data-type="business" class="tabs-link">Бизнес</a>
+            </li>
+            <li class="tabs-item">
+              <a href="#" data-type="creativity" class="tabs-link">Творчество</a>
+            </li>
+            <!-- <li class="tabs-item">
+              <a href="#" class="tabs-link">ТочноНеБизнес</a>
+            </li> -->
+          </ul>
         </div>
 
-        <div class="catalog__pagination">
-          <ul class="pagination">
-            <li class="pagination__item">
-            <button class="pagination__link">1</button>
-            </li>
-            <li class="pagination__item">
-              <button class="pagination__link">2</button>
-            </li>
-            <li class="pagination__item">
-              <button class="pagination__link">3</button>
-            </li>
-            <li class="pagination__item">
-              <button class="pagination__link">4</button>
-            </li>
-            <li class="pagination__item">
-              <button class="pagination__link">5</button>
-            </li>
-            <li class="pagination__item">
-              <button class="pagination__link">6</button>
-            </li>
-            <li class="pagination__item">
-              <button class="pagination__link">7</button>
-            </li>
-            <li class="pagination__item">
-              <button class="pagination__link">8</button>
-            </li>
-            <li class="pagination__item">
-              <button class="pagination__link">9</button>
-           </li>
-            <li class="pagination__item">
-              <button class="pagination__link">10</button>
-            </li>
-          </ul>
+        <div class="catalog__list-wrap">
+          <div class="catalog__list j-catalog__list">
+          </div>
+
+          <div class="catalog__pagination">
+            <ul class="pagination">
+              <li class="pagination__item">
+                <button href="#" class="pagination__link pagination__link--active">1</button>
+              </li>
+              <li class="pagination__item">
+                <button href="#" class="pagination__link">2</button>
+              </li>
+              <li class="pagination__item">
+                <button href="#" class="pagination__link">3</button>
+              </li>
+              <li class="pagination__item">
+                <button href="#" class="pagination__link">4</button>
+              </li>
+              <li class="pagination__item">
+                <button href="#" class="pagination__link">5</button>
+              </li>
+              <li class="pagination__item">
+                <button href="#" class="pagination__link">6</button>
+              </li>
+              <li class="pagination__item">
+                <button href="#" class="pagination__link">7</button>
+              </li>
+              <li class="pagination__item">
+                <button href="#" class="pagination__link">8</button>
+              </li>
+              <li class="pagination__item">
+                <button href="#" class="pagination__link">9</button>
+             </li>
+              <li class="pagination__item">
+                <button href="#" class="pagination__link">10</button>
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
     </section>
 
-
-    <!-- ul & li -->
-    <!-- ширина пробелов в процентах от родителя  .delivery { &:before {cont'' posa t0 l0 w40% h5 bgc} }-->
 
     <section class="delivery">
       <div class="delivery__inner">
@@ -200,10 +233,9 @@
     </section>
 
 
-    <!-- linear gradient -->
-
     <section class="news">
       <div class="news__inner">
+        <div class="foo">
         <div class="news__header">
           <h2 class="news__title">Наши новинки</h2>
           <a href="#" class="news__link">Все новинки</a>
@@ -211,63 +243,83 @@
 
         <div class="news__list-wrap">
           <div class="news__list">
-            <article class="product-card-mini">
-            <h2 class="product-card-mini__title">
-              <a href="#">Латеральная логика</a>
-            </h2>
-            <a href="#" class="product-card-mini__img-wrap">
-              <img src="" alt="Обложка книги" class="product-card-mini__img">
-            </a>
-            <p class="product-card-mini__descr">Головоломный путь к нестандартному мышлению</p>
-          </article>
+            <article class="news__member-card">
+              <a href="#" class="product-card-mini__inner">
+                <div class="product-card-mini">
+                  <h2 class="product-card-mini__title">Латеральная логика</h2>
+                  <div class="news__product-card-mini__img-wrap">
+                    <picture>
+                      <source media="(min-width: 1280px)" srcset="img/book-store/books/book-lateralnaya-logika.png">
+                      <img src="img/book-store/books/book-lateralnaya-logika_2x.png" alt="Обложка книги" class="news__product-card-mini__img">
+                    </picture>
+                  </div>
+                  <p class="product-card-mini__descr">Головоломный путь к нестандартному мышлению</p>
+                </div>
+              </a>
+            </article>
 
-          <article class="product-card-mini">
-            <h2 class="product-card-mini__title">
-              <a href="#">Путеводитель по лжи</a>
-            </h2>
-            <a href="#" class="product-card-mini__img-wrap">
-              <img src="" alt="Обложка книги" class="product-card-mini__img">
-            </a>
-            <p class="product-card-mini__descr">Критическое мышление в эпоху постправды</p>
-          </article>
+            <article class="news__member-card">
+              <a href="#" class="product-card-mini__inner">
+                <div class="product-card-mini">
+                  <h2 class="product-card-mini__title">Путеводитель по лжи</h2>
+                  <div class="news__product-card-mini__img-wrap">
+                    <picture>
+                      <source media="(min-width: 1280px)" srcset="img/book-store/books_all/putevoditel-po-lzhi.png">
+                      <img src="img/book-store/books_all/putevoditel-po-lzhi_2x.png" alt="Обложка книги" class="news__product-card-mini__img">
+                    </picture>
+                  </div>
+                  <p class="product-card-mini__descr">Критическое мышление в эпоху постправды</p>
+                </div>
+              </a>
+            </article>
 
-          <article class="product-card-mini">
-            <h2 class="product-card-mini__title">
-              <a href="#">Дао физики</a>
-            </h2>
-            <a href="#" class="product-card-mini__img-wrap">
-              <img src="" alt="Обложка книги" class="product-card-mini__img">
-            </a>
-            <p class="product-card-mini__descr">Исследование параллелей между современной физикой и восточной философией</p>
-          </article>
+            <article class="news__member-card">
+              <a href="#" class="product-card-mini__inner">
+                <div class="product-card-mini">
+                  <h2 class="product-card-mini__title">Дао физики</h2>
+                  <div class="news__product-card-mini__img-wrap">
+                    <picture>
+                      <source media="(min-width: 1280px)" srcset="img/book-store/books_all/dao-fiziki.png">
+                      <img src="img/book-store/books_all/dao-fiziki_2x.png" alt="Обложка книги" class="news__product-card-mini__img">
+                    </picture>
+                  </div>
+                  <p class="product-card-mini__descr">Исследование параллелей между современной физикой и восточной философией</p>
+                </div>
+              </a>
+            </article>
 
-          <article class="product-card-mini">
-            <h2 class="product-card-mini__title">
-              <a href="#">Не очевидно</a>
-            </h2>
-            <a href="#" class="product-card-mini__img-wrap">
-              <img src="" alt="Обложка книги" class="product-card-mini__img">
-            </a>
-            <p class="product-card-mini__descr">Как выявлять тренды раньше других</p>
-          </article>
+            <article class="news__member-card">
+              <a href="#" class="product-card-mini__inner">
+                <div class="product-card-mini">
+                  <h2 class="product-card-mini__title">Не очевидно</h2>
+                  <div class="news__product-card-mini__img-wrap">
+                    <picture>
+                      <source media="(min-width: 1280px)" srcset="img/book-store/books/book-ne-ochevidno.png">
+                      <img src="img/book-store/books/book-ne-ochevidno_2x.png" alt="Обложка книги" class="news__product-card-mini__img">
+                    </picture>
+                  </div>
+                  <p class="product-card-mini__descr">Как выявлять тренды раньше других</p>
+                </div>
+              </a>
+            </article>
           </div>
+        </div>
         </div>
       </div>
     </section>
   </div>
-
 </main>
 
 
 
 <footer class="page-footer">
   <div class="page-footer__inner">
-    <div class="logo__inner">
-      <a href="#" class="logo"><img src="" alt="Логотип магазина"></a>
-      <span class="logo-time">с 9:00 до 19:00</span>
+    <div class="page-footer-logo__inner">
+      <span class="logo">BOOK STORE</span>
+      <span class="page-footer-logo__time">с 9:00 до 19:00</span>
     </div>
 
-    <nav class="footer-nav">
+    <nav class="page-footer-nav">
       <ul class="page-footer-nav__list">
         <li class="page-footer-nav__item">
           <a href="#" class="page-footer-nav__link">Книги</a>
@@ -285,7 +337,6 @@
 
 
 
-<!-- <script type="text/javascript" src="./js/slick.min.js"></script> -->
 <script type="module" src="./js/script.js"></script>
 
 

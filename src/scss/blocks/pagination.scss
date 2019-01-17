@@ -35,7 +35,9 @@
     padding: 0 110px 60px;
   }
 
-  @media (min-width: $screen-m) {
+  @media (min-width: $screen-l) {
     padding: 0 55px 60px;
+    margin: 0 auto;
+    width: 1280px;
   }
 }

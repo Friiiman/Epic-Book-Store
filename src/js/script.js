@@ -1,11 +1,13 @@
-import $ from './../../node_modules/jquery/dist/jquery.min.js';
-// import slick from './../../node_modules/slick-carousel/slick/slick.js';
+import $ from 'jquery';
+import slick from './../../node_modules/slick-carousel/slick/slick.min.js';
 import addToPage from './module/addToPage.js';
 import bookCardTemplate from './module/bookCardTemplate.js';
 import sendRequest from './module/sendRequest.js';
-import svg4everybody from 'svg4everybody';
+import svg4everybody from 'svg4everybody'
 
-$(document).ready(function(jqueryFunctions){
+svg4everybody();
+
+$(document).ready(function($){
 
   $('#burger').click(function(menuShow){
     $(this).toggleClass('burger-hide');
@@ -17,6 +19,10 @@ $(document).ready(function(jqueryFunctions){
     $(this).toggleClass('burger-hide');
     $('#burger').toggleClass('burger-hide');
     $('.main-nav__list').toggleClass('menu-open');
+  });
+
+  $('.j-slider').slick({
+    infinite: false
   });
 
 
@@ -46,10 +52,8 @@ $(document).ready(function(jqueryFunctions){
     $('.book-purchase__description-link-show').toggleClass('text-hide');
   });
 
-  // $('.j-slider').slick({
-  // });
-
 });
+
 
 // Объект данных для запроса
 const data = {

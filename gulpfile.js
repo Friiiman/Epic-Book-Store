@@ -105,9 +105,9 @@ function javascript() {
           }
         ]
       },
-      externals: {
-        jquery: 'jQuery'
-      }
+      // externals: {
+      //   jquery: 'jQuery'
+      // }
     }))
     .pipe(dest(`${dir.build}js`))
     .pipe(uglify())
@@ -130,7 +130,7 @@ exports.javascript = javascript;
 //   return src([
 //       './node_modules/slick-carousel/slick/slick.min.js',
 //     ])
-//     .pipe(dest(`${dir.src}js/module/`));
+//     .pipe(dest(`${dir.build}js/`));
 // }
 // exports.copySlickJs = copySlickJs;
 

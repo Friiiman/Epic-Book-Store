@@ -9,6 +9,11 @@
     overflow-x: auto;
     height: 56px;
     padding-top: 23px;
+
+    @media (min-width: $screen-l) {
+      margin: 0 auto;
+      width: 1000px;
+    }
   }
 
   &-item {

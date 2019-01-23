@@ -9,6 +9,11 @@ svg4everybody();
 
 $(document).ready(function($){
 
+  $('#form').submit(function(formSubmit) {
+    formSubmit.preventDefault();
+  });
+
+
   $('#burger').click(function(menuShow){
     $(this).toggleClass('burger-hide');
     $('#burger-close').toggleClass('burger-hide');
@@ -20,6 +25,7 @@ $(document).ready(function($){
     $('#burger').toggleClass('burger-hide');
     $('.main-nav__list').toggleClass('menu-open');
   });
+
 
   $('.j-slider').slick({
     infinite: false
@@ -38,15 +44,15 @@ $(document).ready(function($){
   });
 
 
-  $('.book-purchase__description-link-show').click(function() {
-    event.preventDefault();
+  $('.book-purchase__description-link-show').click(function(showMore) {
+    showMore.preventDefault();
     $(this).toggleClass('text-hide');
     $('.book-purchase__description-text-more').toggleClass('text-hide');
     $('.book-purchase__description-link-hide').toggleClass('text-hide');
   });
 
-  $('.book-purchase__description-link-hide').click(function() {
-    event.preventDefault();
+  $('.book-purchase__description-link-hide').click(function(hideMore) {
+    hideMore.preventDefault();
     $(this).toggleClass('text-hide');
     $('.book-purchase__description-text-more').toggleClass('text-hide');
     $('.book-purchase__description-link-show').toggleClass('text-hide');

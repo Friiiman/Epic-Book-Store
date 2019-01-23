@@ -101,9 +101,6 @@
       }, {
       "message": "Для этого свойства данные единицы измерения в чёрном списке"
     }],
-    "declaration-block-no-duplicate-properties": [true, {
-      "message": "Правила повторять не следует"
-    }],
     "declaration-block-no-shorthand-property-overrides": [true, {
       "message": "Свойство это неочевидно перебивает другое для селектора этого"
     }],

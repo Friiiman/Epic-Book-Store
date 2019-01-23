@@ -55,7 +55,7 @@
     padding-bottom: 40px;
   }
 
-  &__mail,
+  &__email,
   &__message {
     margin-bottom: 40px;
     width: 100%;
@@ -332,4 +332,5 @@ input[type='number']:focus {
 //-----------
 .error {
   color: $error-color;
+  border-color: $error-color;
 }

@@ -314,7 +314,7 @@ ul {
 
 @media (min-width: 1280px) {
   .page-header__inner {
-    width: 1280px;
+    width: 1260px;
     margin: 0 auto;
     padding: 18px 60px; }
   .main-nav__list {
@@ -382,7 +382,7 @@ ul {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    width: 1280px;
+    width: 1260px;
     margin: 0 auto;
     padding: 18px 60px; } }
 
@@ -755,7 +755,7 @@ input[type='number']:focus {
   padding: 35px 10px 70px; }
   @media (min-width: 1280px) {
     .slider {
-      width: 1280px;
+      width: 1260px;
       margin: 0 auto; } }
   .slider__item {
     position: relative;
@@ -950,7 +950,7 @@ input[type='number']:focus {
     .catalog__list {
       padding: 0 40px;
       margin: 0 auto;
-      width: 1280px; } }
+      width: 1260px; } }
 
 .tabs {
   padding: 0 30px;
@@ -1082,7 +1082,7 @@ input[type='number']:focus {
     .pagination {
       padding: 0 55px 60px;
       margin: 0 auto;
-      width: 1280px; } }
+      width: 1260px; } }
 
 .delivery {
   padding: 0 10px 70px; }
@@ -1196,7 +1196,7 @@ input[type='number']:focus {
       .contacts__description__inner {
         padding: 55px 60px;
         margin: 0 auto;
-        width: 1280px; } }
+        width: 1260px; } }
   .contacts__description__list {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1276,7 +1276,7 @@ input[type='number']:focus {
   @media (min-width: 1280px) {
     .book-purchase__inner {
       padding: 40px 60px 80px;
-      width: 1280px;
+      width: 1260px;
       margin: 0 auto; } }
 
 .book-purchase {
@@ -1635,7 +1635,7 @@ input[type='number']:focus {
   padding: 60px 40px 90px; }
   @media (min-width: 1280px) {
     .recommendation {
-      width: 1280px;
+      width: 1260px;
       margin: 0 auto; } }
   .recommendation__list {
     display: -ms-grid;

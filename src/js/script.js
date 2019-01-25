@@ -31,6 +31,10 @@ $(document).ready(function($){
     infinite: false
   });
 
+  $('.j-pages-slider').slick({
+    infinite: false
+  });
+
 
   $('.tabs-link').click(function(tabsActive) {
     $('.tabs-link').removeClass('tabs-link--active');

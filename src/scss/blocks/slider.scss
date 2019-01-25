@@ -1,9 +1,14 @@
 .slider {
   padding: 35px 10px 70px;
 
+  @media (min-width: $screen-m) {
+    padding: 35px 140px 0;
+  }
+
   @media (min-width: $screen-l) {
     width: 1260px;
     margin: 0 auto;
+    padding: 35px 120px 0;
   }
 
   &__item {
@@ -40,7 +45,6 @@
     }
 
     &-text {
-      // position: relative;
       position: absolute;
       bottom: 5px;
       padding: 30px 10px 30px;
@@ -50,7 +54,6 @@
 
       &:before {
         content: '';
-        display: block;
         position: absolute;
         top: -8px;
         bottom: -8px;
@@ -104,9 +107,6 @@
 
       &__link {
         display: none;
-        // margin-top: 50px;
-        // margin-left: 70px;
-        // margin-right: 70px;
       }
     }
 
@@ -125,14 +125,6 @@
       z-index: -1;
     }
   }
-
-  @media (min-width: $screen-m) {
-    padding: 35px 140px 0;
-  }
-
-  @media (min-width: $screen-l) {
-    padding: 35px 120px 0;
-  }
 }
 
 .slick-arrow {
@@ -141,7 +133,7 @@
   height: 40px;
   font-size: 0;
   border: none;
-  background-color: $second-color-light;
+  background-color: $second-color-lighten;
   border-radius: 50%;
   cursor: pointer;
 
@@ -171,12 +163,11 @@
   &:before {
     position: absolute;
     content: '';
-    display: inline-block;
     top:  12px;
     bottom: 0;
     left: 14px;
     right: 0;
-    background-image: url(./../img/book-store/sprites/arrow-slider.png);
+    background-image: url(../img/book-store/sprites/arrow-slider.png);
     background-repeat: no-repeat;
     transform: rotate(0);
   }
@@ -186,7 +177,7 @@
     bottom: 12px;
     left: 0;
     right: 17px;
-    background-image: url(./../img/book-store/sprites/arrow-slider--hover.png);
+    background-image: url(../img/book-store/sprites/arrow-slider--hover.png);
     background-repeat: no-repeat;
     transform: rotate(180deg);
   }
@@ -209,12 +200,11 @@
   &:before {
     position: absolute;
     content: '';
-    display: inline-block;
     top: 0;
     bottom: 12px;
     left: 0;
     right: 14px;
-    background-image: url(./../img/book-store/sprites/arrow-slider.png);
+    background-image: url(../img/book-store/sprites/arrow-slider.png);
     background-repeat: no-repeat;
     transform: rotate(180deg);
   }
@@ -224,13 +214,8 @@
     bottom: 0;
     left: 17px;
     right: 0;
-    background-image: url(./../img/book-store/sprites/arrow-slider--hover.png);
+    background-image: url(../img/book-store/sprites/arrow-slider--hover.png);
     background-repeat: no-repeat;
     transform: rotate(0);
   }
 }
-
-// .slick-disabled {
-//   background-color: $gray-light;
-//   cursor: auto;
-// }

@@ -87,31 +87,21 @@
 
 @media (min-width: $screen-m) {
 
-      .emailBlock,
-      .messageBlock {
-        display: inline-block;
-        width: 48%;
-      }
+  .form__email-block,
+  .form__message-block {
+    display: inline-block;
+    width: 48%;
+  }
 
-      .emailBlock {
-        margin-right: 3%;
-      }
-    }
+  .form__email-block {
+    margin-right: 3%;
+  }
+}
 
-    @media (min-width: $screen-l) {
+@media (min-width: $screen-l) {
 
-      .emailBlock,
-      .messageBlock {
-        width: 360px;
-      }
-    }
-
-.map {
-  width: 100%;
-  height: 340px;
-  margin-bottom: 40px;
-
-  @media (min-width: $screen-l) {
-    padding: 0 60px;
+  .form__email-block,
+  .form__message-block {
+    width: 360px;
   }
 }

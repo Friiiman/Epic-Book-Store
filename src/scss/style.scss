@@ -1,32 +1,25 @@
 @import 'variables';
 
 @import 'blocks/slick';
-
 @import 'blocks/fonts';
 @import 'blocks/page';
-
-// -------single/duplicate elements-------
 @import 'blocks/header';
 @import 'blocks/footer';
 @import 'blocks/news';
 @import 'blocks/form';
+@import 'blocks/checkbox';
 @import 'blocks/library';
-
-// -------index.html-------
 @import 'blocks/promo';
 @import 'blocks/slider';
+@import 'blocks/pages-slider';
+@import 'blocks/cross';
 @import 'blocks/catalog';
 @import 'blocks/tabs';
 @import 'blocks/productCardMini';
 @import 'blocks/pagination';
 @import 'blocks/delivery';
-
-// -------contacts.html-------
 @import 'blocks/contacts';
-
-// -------bookInner.html-------
+@import 'blocks/map';
 @import 'blocks/book-inner';
 @import 'blocks/book-purchase';
-
-// ------recommendation.html------
 @import 'blocks/recommendation';

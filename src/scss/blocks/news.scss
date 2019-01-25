@@ -1,6 +1,6 @@
 .news {
   padding: 0 30px;
-  background: linear-gradient(to bottom, $main-color 0 30%, $second-color-light 30% 100%);
+  background: linear-gradient(to bottom, $main-color 0 30%, $second-color-lighten 30% 100%);
 
   &__header {
     display: flex;
@@ -37,15 +37,6 @@
     &:last-child {
       margin-right: 0;
     }
-
-    // &:hover {
-
-    //   .news__product-card-mini__img {
-    //     position: relative;
-    //     top: -10px;
-    //     box-shadow: 0px 7px 35px 0 $second-color-light;
-    //   }
-    // }
   }
 
   &__product-card-mini__img {

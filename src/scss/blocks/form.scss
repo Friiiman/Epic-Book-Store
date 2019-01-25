@@ -62,9 +62,10 @@
     background-color: $main-color;
     border: none;
     border-bottom: 4px solid $gray-light;
+    font-size: 16px;
 
     &:hover {
-      border-color: $second-color-light;
+      border-color: $second-color-lighten;
     }
 
     &:focus {
@@ -82,7 +83,7 @@
   }
 
   &__submit:hover {
-    background-color: $second-color-light;
+    background-color: $second-color-lighten;
   }
 
   &__submit:focus {
@@ -141,7 +142,7 @@
     }
 
     &:hover:before {
-      color: $second-color-light;
+      color: $second-color-lighten;
     }
 
     &:checked:before {
@@ -165,172 +166,137 @@
     display: inline-block;
     outline: none;
     z-index: 10;
-
-    &-text {
-      padding-left: 35px;
-      font-weight: 700;
-    }
-  }
-}
-
-#facebook,
-#vk,
-#thumbs_up,
-#thumbs_down {
-  position: absolute;
-  display: inline-block;
-  top: -5px;
-  background: url('./../img/book-store/sprites/social.png') no-repeat;
-  overflow: hidden;
-  text-align: left;
-}
-
-#facebook {
-  background-position: -5px -50px;
-  width: 20px;
-  height: 20px;
-
-  &:hover {
-    background-position: -5px 0;
   }
 
-  &:checked {
-    background-position: -5px -25px;
-  }
-}
-
-#vk {
-  background-position: -5px -125px;
-  width: 20px;
-  height: 20px;
-
-  &:hover {
-    background-position: -5px -75px;
-  }
-
-  &:checked {
-    background-position: -5px -100px;
-  }
-}
-
-#thumbs_up {
-  background-position: -5px -246px;
-  width: 18px;
-  height: 19px;
-
-  &:hover {
-    background-position: -5px -198px;
-  }
-
-  &:checked {
-    background-position: -5px -222px;
-  }
-}
-
-#thumbs_down {
-  background-position: -5px -270px;
-  width: 18px;
-  height: 19px;
-
-  &:hover {
-    background-position: -5px -150px;
-  }
-
-  &:checked {
-    background-position: -5px -174px;
-  }
-}
-
-
-// --------------Checkbox--------------
-.checkbox {
-  appearance: none;
-  position: relative;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  height: 20px;
-  width: 20px;
-  transition: all linear 0.5s;
-  background: $main-color;
-  border: 4px solid $gray-lighten;
-  color: $second-color;
-  cursor: pointer;
-  display: inline-block;
-  margin-right: 0.5rem;
-  outline: none;
-  z-index: 10;
-
-  &:hover {
-    border-color: $second-color;
-  }
-
-  &:checked {
-    background: $gray-lighten;
-  }
-
-  &:checked::before {
-    content: '✔';
-    position: absolute;
-    top: -3px;
-    left: 2px;
-    display: inline-block;
-    font-size: 12px;
-  }
-
-  &-wrap {
-    position: absolute;
-  }
-
-  &__text {
-    display: inline-block;
-    max-width: 420px;
-    font-size: 14px;
-    line-height: 1.5;
+  &__social-text {
     padding-left: 35px;
-    margin-bottom: 35px;
+    font-weight: 700;
   }
 
-  &__link {
-    color: $link-color;
+  &__social-facebook,
+  &__social-vk,
+  &__social-thumbs-up,
+  &__social-thumbs-down {
+    position: absolute;
+    display: inline-block;
+    top: -5px;
+    background: url('../img/book-store/sprites/social.png') no-repeat;
+    overflow: hidden;
+    text-align: left;
+  }
+
+  &__social-facebook {
+    background-position: -5px -50px;
+    width: 20px;
+    height: 20px;
 
     &:hover {
-      color: $link-color-hover;
+      background-position: -5px 0;
     }
+
+    &:checked {
+      background-position: -5px -25px;
+    }
+  }
+
+  &__social-vk {
+    background-position: -5px -125px;
+    width: 20px;
+    height: 20px;
+
+    &:hover {
+      background-position: -5px -75px;
+    }
+
+    &:checked {
+      background-position: -5px -100px;
+    }
+  }
+
+  &__social-thumbs-up {
+    background-position: -5px -246px;
+    width: 18px;
+    height: 19px;
+
+    &:hover {
+      background-position: -5px -198px;
+    }
+
+    &:checked {
+      background-position: -5px -222px;
+    }
+  }
+
+  &__social-thumbs-down {
+    background-position: -5px -270px;
+    width: 18px;
+    height: 19px;
+
+    &:hover {
+      background-position: -5px -150px;
+    }
+
+    &:checked {
+      background-position: -5px -174px;
+    }
+  }
+
+  &__success,
+  &__denied {
+    position: fixed;
+    margin-top: -130px;
+    top: 50%;
+    width: 100%;
+    height: 260px;
+    background-color: $white;
+    border-radius: 3px;
+    box-shadow: 0 12px 38px 10px rgba(244, 212, 228, 0.7);
+    z-index: 9999;
+
+    @media (min-width: 360px) {
+      margin-left: -180px;
+      left: 50%;
+      width: 360px;
+    }
+  }
+
+  &__success-hide,
+  &__denied-hide {
+    display: none;
+  }
+
+  &__success-inner,
+  &__denied-inner {
+    position: relative;
+    padding-top: 40px;
+    padding-left: 30px;
+  }
+
+  &__success-title {
+    width: 200px;
+    font-size: 30px;
+    font-weight: 700;
+  }
+
+  &__denied-title {
+    font-size: 30px;
+    font-weight: 700;
+    color: $error-color;
+  }
+
+  &__success-description {
+    margin: 30px 0 0;
+    width: 230px;
+    line-height: 1.7;
+  }
+
+  &__denied-description {
+    margin: 25px 0 0;
+    width: 295px;
+    line-height: 1.7;
   }
 }
 
-// ------InputNumber arrow button in Chrome------
-input[type='number']::-webkit-outer-spin-button,
-input[type='number']::-webkit-inner-spin-button {
-  // -webkit-appearance: none;
-  appearance: none;
-  margin: 0;
-}
-
-// ------InputNumber arrow button in Firefox------
-input[type='number'] {
-  // -moz-appearance: textfield;
-  appearance: textfield;
-}
-
-input[type='number']:hover,
-input[type='number']:focus {
-  // -moz-appearance: number-input;
-  appearance: number-input;
-}
-
-// // ------InputNumber arrow button in other------
-// input[type='number']::-webkit-inner-spin-button,
-// input[type='number']::-webkit-outer-spin-button {
-//   // -webkit-appearance: none;
-//   appearance: none;
-//   margin: 0;
-// }
-
-//-----------
-.error {
-  color: $error-color;
+.form__email--error {
   border-color: $error-color;
 }

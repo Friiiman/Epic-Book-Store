@@ -21,7 +21,7 @@
 
   &__article-little {
     grid-area: article-little;
-    padding-left: 30px;
+    padding-left: 20px;
     border-radius: 3px;
     box-shadow: 0 3px 10px 0 rgba(64, 66, 172, 0.35);
 
@@ -59,6 +59,7 @@
     &__description {
       margin: 0;
       padding-top: 15px;
+      max-width: 250px;
       line-height: 1.7;
     }
 
@@ -70,9 +71,9 @@
 
   &__article-medium {
     grid-area: article-medium;
-    background-image: url(./../img/book-store/recommendation-article-medium.png);
+    background-color: $link-color;
+    background-image: url(../img/book-store/recommendation-article-medium.png);
     background-repeat: no-repeat;
-    background-size: 100%;
     border-radius: 3px;
 
     &__title {
@@ -86,7 +87,8 @@
 
   &__article-big {
     grid-area: article-big;
-    background-image: url(./../img/book-store/recommendation-article-big.png);
+    background-color: $link-color;
+    background-image: url(../img/book-store/recommendation-article-big.png);
     background-repeat: no-repeat;
     background-size: 100%;
     border-radius: 3px;
@@ -108,7 +110,7 @@
   &__article-colored {
     grid-area: article-colored;
     padding-left: 17px;
-    background-color: #ce6194;
+    background-color: $second-color-light;
     border-radius: 3px;
     box-shadow: 0 3px 10px 0 rgba(64, 66, 172, 0.35);
 
@@ -130,7 +132,8 @@
 
   &__article-footer {
     grid-area: article-footer;
-    background-image: url(./../img/book-store/recommendation-article-footer.png);
+    background-color: $second-color;
+    background-image: url(../img/book-store/recommendation-article-footer.png);
     background-repeat: no-repeat;
     background-size: 100%;
     border-radius: 3px;

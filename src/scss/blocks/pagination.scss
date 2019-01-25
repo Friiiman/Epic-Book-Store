@@ -17,7 +17,7 @@
     cursor: pointer;
 
     &:hover {
-      background-color: $second-color-light;
+      background-color: $second-color-lighten;
     }
 
     &:active {
@@ -27,7 +27,7 @@
 
     &--active {
       color: $second-color;
-      background-color: $second-color-light;
+      background-color: $second-color-lighten;
     }
   }
 

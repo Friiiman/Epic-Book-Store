@@ -1,26 +1,27 @@
 .library {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  background-color: $second-color;
+  background-image: url(../img/book-store/library.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top 0 right -480px;
+  padding: 38px 35px 50px;
+
+  @media (min-width: 600px) {
+    background-position: center;
+  }
+
+  @media (min-width: $screen-m) {
+    padding: 65px 80px 75px;
+  }
+
+  @media (min-width: $screen-l) {
+    padding: 60px 230px 115px;
+  }
 
   &__inner {
-    background-image: url(../img/book-store/library.png);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: top 0 right -480px;
-    padding: 38px 35px 50px;
-
-    @media (min-width: 600px) {
-      background-position: center;
-    }
-
-    @media (min-width: $screen-m) {
-      padding: 65px 80px 75px;
-    }
-
-    @media (min-width: $screen-l) {
-      padding: 60px 230px 115px;
-    }
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 
   &__shape {

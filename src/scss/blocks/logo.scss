@@ -1,0 +1,17 @@
+.logo {
+  font-weight: 700;
+
+  @media (min-width: $screen-m) {
+    padding-right: 30px;
+  }
+
+  &__time {
+    display: none;
+    font-size: 14px;
+    color: $gray-dark;
+
+    @media (min-width: $screen-m) {
+      display: inline-block;
+    }
+  }
+}

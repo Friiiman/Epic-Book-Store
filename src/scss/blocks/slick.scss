@@ -19,10 +19,12 @@
     outline: none;
   }
 
+  /* stylelint-disable */
   &.dragging {
     cursor: pointer;
     cursor: hand;
   }
+  /* stylelint-enable */
 }
 
 .slick-slider .slick-track,

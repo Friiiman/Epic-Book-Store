@@ -1,6 +1,16 @@
 .pagination {
   padding: 0 60px 60px;
 
+  @media (min-width: $screen-m) {
+    padding: 0 110px 60px;
+  }
+
+  @media (min-width: $screen-l) {
+    padding: 0 55px 60px;
+    margin: 0 auto;
+    width: 1260px;
+  }
+
   &__item {
     display: inline-block;
     padding-bottom: 3px;
@@ -10,7 +20,7 @@
     width: 30px;
     height: 30px;
     font-weight: 700;
-    color: #000;
+    color: $black;
     background-color: transparent;
     border: none;
     border-radius: 50%;
@@ -22,22 +32,12 @@
 
     &:active {
       background-color: transparent;
-      color: #afafaf;
-    }
-
-    &--active {
-      color: $second-color;
-      background-color: $second-color-lighten;
+      color: $gray;
     }
   }
 
-  @media (min-width: $screen-m) {
-    padding: 0 110px 60px;
-  }
-
-  @media (min-width: $screen-l) {
-    padding: 0 55px 60px;
-    margin: 0 auto;
-    width: 1260px;
+  &__link--active {
+    color: $second-color;
+    background-color: $second-color-lighten;
   }
 }

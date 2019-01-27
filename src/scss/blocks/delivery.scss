@@ -1,6 +1,10 @@
 .delivery {
   padding: 0 10px 70px;
 
+  @media (min-width: $screen-m) {
+    padding: 0 40px 70px;
+  }
+
   &__inner {
     position: relative;
     border: 8px solid $gray-lighten;
@@ -67,6 +71,12 @@
 
   &__list {
     padding: 0 20px;
+
+    @media (min-width: $screen-m) {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+    }
   }
 
   &__item {
@@ -75,48 +85,38 @@
     align-items: center;
     padding-top: 50px;
 
-    &:last-child {
-      padding-bottom: 50px;
-    }
-
-    &-text {
-      margin: 0;
-      padding-top: 30px;
-      text-align: center;
-    }
-  }
-
-  @media (min-width: $screen-m) {
-    padding: 0 40px 70px;
-
-    &__list {
-      display: flex;
-      flex-direction: row;
-      flex-wrap: wrap;
-    }
-
-    &__item {
+    @media (min-width: $screen-m) {
       width: 40%;
-
-      &:nth-child(odd) {
-        margin-right: 15%;
-      }
     }
-  }
 
-  @media (min-width: $screen-l) {
-
-    &__item {
+    @media (min-width: $screen-l) {
       width: 250px;
       padding-right: 10px;
+    }
 
-      &:nth-child(odd) {
-        margin-right: auto;
+    &:nth-child(odd) {
+
+      @media (min-width: $screen-m) {
+        margin-right: 15%;
       }
 
-      &:last-child {
+      @media (min-width: $screen-l) {
+        margin-right: auto;
+      }
+    }
+
+    &:last-child {
+      padding-bottom: 50px;
+
+      @media (min-width: $screen-l) {
         padding-right: 0;
       }
     }
+  }
+
+  &__item-text {
+    margin: 0;
+    padding-top: 30px;
+    text-align: center;
   }
 }

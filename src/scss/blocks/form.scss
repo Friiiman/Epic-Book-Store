@@ -1,46 +1,43 @@
 .form {
+  position: relative;
+  border: 8px solid $gray-lighten;
+  padding: 0 13px;
 
-  &__inner {
-    position: relative;
-    border: 8px solid $gray-lighten;
-    padding: 0 13px;
+  &:before {
+    content: '';
+    position: absolute;
+    top: -8px;
+    left: 15%;
+    width: 40%;
+    height: 8px;
+    background-color: $main-color;
 
-    &:before {
-      content: '';
-      position: absolute;
-      top: -8px;
-      left: 15%;
-      width: 40%;
-      height: 8px;
-      background-color: $main-color;
-
-      @media (min-width: $screen-m) {
-        left: 5%;
-      }
-
-      @media (min-width: $screen-l) {
-        left: 50px;
-        width: 400px;
-      }
+    @media (min-width: $screen-m) {
+      left: 5%;
     }
 
-    &:after {
-      content: '';
-      position: absolute;
-      bottom: -8px;
-      right: 15%;
-      width: 40%;
-      height: 8px;
-      background-color: $main-color;
+    @media (min-width: $screen-l) {
+      left: 50px;
+      width: 400px;
+    }
+  }
 
-      @media (min-width: $screen-m) {
-        right: 5%;
-      }
+  &:after {
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    right: 15%;
+    width: 40%;
+    height: 8px;
+    background-color: $main-color;
 
-      @media (min-width: $screen-l) {
-        right: 50px;
-        width: 740px;
-      }
+    @media (min-width: $screen-m) {
+      right: 5%;
+    }
+
+    @media (min-width: $screen-l) {
+      right: 50px;
+      width: 740px;
     }
   }
 
@@ -73,6 +70,10 @@
     }
   }
 
+  &__email--error {
+    border-color: $error-color;
+  }
+
   &__submit {
     height: 50px;
     border: none;
@@ -98,7 +99,6 @@
     border: none;
     border-radius: 3px;
 
-
     &:hover,
     &:focus {
       background-color: $gray-lighter;
@@ -107,10 +107,10 @@
     &:focus {
       border: 1px solid $gray-light;
     }
+  }
 
-    &-text {
-      padding-left: 10px;
-    }
+  &__quantity-text {
+    padding-left: 10px;
   }
 
   &__likes {
@@ -156,6 +156,21 @@
   }
 
   &__social {
+    display: flex;
+    flex-direction: row;
+    padding-top: 50px;
+  }
+
+  &__social-item {
+    position: relative;
+    padding-right: 30px;
+
+    &:last-child {
+      padding-right: 0;
+    }
+  }
+
+  &__social-input {
     appearance: none;
     position: relative;
     top: 0;
@@ -260,8 +275,8 @@
     }
   }
 
-  &__success-hide,
-  &__denied-hide {
+  &__success--hide,
+  &__denied--hide {
     display: none;
   }
 
@@ -295,8 +310,24 @@
     width: 295px;
     line-height: 1.7;
   }
-}
 
-.form__email--error {
-  border-color: $error-color;
+  &__block-email,
+  &__block-message {
+
+    @media (min-width: $screen-m) {
+      display: inline-block;
+      width: 48%;
+    }
+
+    @media (min-width: $screen-l) {
+      width: 360px;
+    }
+  }
+
+  &__block-email {
+
+    @media (min-width: $screen-m) {
+      margin-right: 3%;
+    }
+  }
 }

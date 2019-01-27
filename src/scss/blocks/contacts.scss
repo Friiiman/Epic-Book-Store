@@ -2,106 +2,82 @@
   padding-bottom: 50px;
 
   &__description {
+    padding: 35px 30px;
 
-    &-title {
-      margin: 0;
-      padding-bottom: 40px;
-      font-size: 40px;
+    @media (min-width: $screen-m) {
+      padding: 35px 40px;
     }
 
-    &__inner {
-      padding: 35px 30px;
+    @media (min-width: $screen-l) {
+      padding: 55px 60px;
+      margin: 0 auto;
+      width: 1260px;
+    }
+  }
 
-      @media (min-width: $screen-m) {
-        padding:35px 40px;
-      }
+  &__description-title {
+    margin: 0;
+    padding-bottom: 40px;
+    font-size: 40px;
+  }
 
-      @media (min-width: $screen-l) {
-        padding: 55px 60px;
-        margin: 0 auto;
-        width: 1260px;
-      }
+  &__description-list {
+    display: flex;
+    flex-direction: column;
+    padding-left: 20px;
+
+    @media (min-width: $screen-m) {
+      flex-direction: row;
+      flex-wrap: wrap;
+    }
+  }
+
+  &__description-item {
+    padding-bottom: 20px;
+    color: $link-color;
+
+    @media (min-width: $screen-m) {
+      padding-right: 80px;
     }
 
-    &__list {
-      display: flex;
-      flex-direction: column;
-      padding-left: 20px;
-
-      @media (min-width: $screen-m) {
-        flex-direction: row;
-        flex-wrap: wrap;
-      }
-    }
-
-    &__item {
-      padding-bottom: 20px;
-      color: #1a1ff7;
-
-      &:last-child {
-        padding-bottom: 0;
-      }
-
-      @media (min-width: $screen-m) {
-        padding-right: 80px;
-      }
+    &:last-child {
+      padding-bottom: 0;
     }
   }
 
   &__form {
     padding: 0 10px;
 
-    &__inner {
-
-      @media (min-width: $screen-m) {
-        padding: 0 20px;
-      }
-
-      @media (min-width: $screen-l) {
-        width: 1210px;
-        margin: 0 auto;
-      }
-    }
-
     @media (min-width: $screen-m) {
       padding: 0 30px;
     }
+  }
 
-    &__submit {
-      width: 100%;
-      margin-bottom: 60px;
+  &__form-inner {
 
-      @media (min-width: $screen-m) {
-        width: 48%;
-      }
+    @media (min-width: $screen-m) {
+      padding: 0 20px;
+    }
 
-      @media (min-width: $screen-l) {
-        position: absolute;
-        width: 360px;
-        right: 20px;
-        bottom: 57px;
-      }
+    @media (min-width: $screen-l) {
+      width: 1210px;
+      margin: 0 auto;
     }
   }
-}
 
-@media (min-width: $screen-m) {
+  &__form-submit {
+    width: 100%;
+    margin-bottom: 60px;
 
-  .form__email-block,
-  .form__message-block {
-    display: inline-block;
-    width: 48%;
-  }
+    @media (min-width: $screen-m) {
+      width: 48%;
+    }
 
-  .form__email-block {
-    margin-right: 3%;
-  }
-}
-
-@media (min-width: $screen-l) {
-
-  .form__email-block,
-  .form__message-block {
-    width: 360px;
+    @media (min-width: $screen-l) {
+      position: absolute;
+      width: 360px;
+      right: 20px;
+      bottom: 57px;
+    }
   }
 }

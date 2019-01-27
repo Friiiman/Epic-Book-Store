@@ -16,14 +16,14 @@
 
 <header class="page-header">
   <div class="page-header__inner">
-    <div class="logo__inner">
+    <div class="page-header__logo">
       <a href="index.html" class="logo">BOOK STORE</a>
       <span class="logo__time">с 9:00 до 19:00</span>
     </div>
 
     <nav class="main-nav">
       <button id="burger" class="main-nav__toggle"><span class="main-nav__toggle-name">Главное меню</span></button>
-      <button id="burger-close" class="main-nav__toggle-close burger-hide"><span class="main-nav__toggle-close-name">Главное меню</span></button>
+      <button id="burger-close" class="main-nav__toggle-close main-nav__toggle--hide"><span class="main-nav__toggle-close-name">Главное меню</span></button>
       <div class="main-nav__inner">
         <ul class="main-nav__list">
           <li class="main-nav__item">
@@ -36,10 +36,12 @@
             <a href="contacts.html" class="main-nav__link">Контакты</a>
           </li>
           <li class="main-nav__item">
-            <a href="phone:88005008020" class="main-nav__link main-nav__link-phone">
-              <svg width="16" height="16" class="phone--blue">
+            <a href="tel:88005008020" class="main-nav__link main-nav__link-phone">
+              <svg width="16" height="16" class="main-nav__link-phone--blue">
                 <use xlink:href="img/sprite.svg#item-phone--blue"></use>
-              </svg> 8 800 500-80-20</a>
+              </svg>
+              8 800 500-80-20
+            </a>
           </li>
         </ul>
         <div class="main-nav__button">
@@ -67,50 +69,50 @@
     <h1 class="recommendation__title">Наши рекомендации</h2>
     <div class="recommendation__list">
       <article class="recommendation__article-little">
-        <h2 class="recommendation__article-little__title">Новая статья в блоге</h2>
-        <p class="recommendation__article-little__description">Посмотрите как чтение книг меняет восприятие человека.</p>
-        <a href="#" class="recommendation__article-little__link">Читать статью</a>
+        <h2 class="recommendation__article-little-title">Новая статья в блоге</h2>
+        <p class="recommendation__article-little-description">Посмотрите как чтение книг меняет восприятие человека.</p>
+        <a href="#" class="recommendation__article-little-link">Читать статью</a>
       </article>
 
       <a href="#" class="recommendation__article-medium">
-        <h2 class="recommendation__article-medium__title">Наши подборки ваших лучших фотографий у нас</h2>
+        <h2 class="recommendation__article-medium-title">Наши подборки ваших лучших фотографий у нас</h2>
       </a>
 
       <a href="#" class="recommendation__article-big">
-        <h2 class="recommendation__article-big__title">Книга осени!</h2>
-        <p class="recommendation__article-big__description">Проголосуй за лучшую книгу этой осени</p>
+        <h2 class="recommendation__article-big-title">Книга осени!</h2>
+        <p class="recommendation__article-big-description">Проголосуй за лучшую книгу этой осени</p>
       </a>
 
       <article class="recommendation__article-vote">
-        <h2 class="recommendation__article-vote__title">Нам важно ваше мнение!</h2>
-        <p class="recommendation__article-vote__description">Ставьте пальцы вверх, мы хотим знать ваше мнение</p>
-        <button class="recommendation__article-vote__button form__submit">Проголосовать</button>
+        <h2 class="recommendation__article-vote-title">Нам важно ваше мнение!</h2>
+        <p class="recommendation__article-vote-description">Ставьте пальцы вверх, мы хотим знать ваше мнение</p>
+        <button class="recommendation__article-vote-button">Проголосовать</button>
       </article>
 
       <a href="#" class="recommendation__article-colored">
-        <h2 class="recommendation__article-colored__title">Книги для детей</h2>
-        <p class="recommendation__article-colored__description">У нас появился новый раздел, в котором мы подбираем книги для юных читателей</p>
+        <h2 class="recommendation__article-colored-title">Книги для детей</h2>
+        <p class="recommendation__article-colored-description">У нас появился новый раздел, в котором мы подбираем книги для юных читателей</p>
       </a>
 
       <article class="recommendation__article-footer">
-        <h2 class="recommendation__article-footer__title">У вас есть старые книги?</h2>
-        <p class="recommendation__article-footer__description">Приносите их нам и обменяйте на новые.</p>
+        <h2 class="recommendation__article-footer-title">У вас есть старые книги?</h2>
+        <p class="recommendation__article-footer-description">Приносите их нам и обменяйте на новые.</p>
       </article>
 
       <article class="recommendation__article-gift">
-        <div class="recommendation__article-gift__text">
-          <h3 class="recommendation__article-gift__title">Книга в подарок!</h3>
-          <span class="recommendation__article-gift__description">При вашем новом заказе мы подарим вам книгу</span>
+        <div class="recommendation__article-gift-text">
+          <h3 class="recommendation__article-gift-title">Книга в подарок!</h3>
+          <span class="recommendation__article-gift-description">При вашем новом заказе мы подарим вам книгу</span>
         </div>
-        <article class="product-card-mini">
-          <a href="#" class="product-card-mini__inner">
-            <div class="product-card-mini">
+        <article class="recommendation__product-card-mini">
+          <a href="bookInner.html" class="product-card-mini">
+            <div class="product-card-mini__inner">
               <h2 class="product-card-mini__title">Путиводитель по лжи</h2>
-              <div class="product-card-mini__img-wrap recommendation__article-gift__img-wrap">
+              <div class="product-card-mini__img">
                 <picture>
                   <source media="(min-width: 1280px)" srcset="img/book-store/books_all/putevoditel-po-lzhi.png">
-                    <img src="img/book-store/books_all/putevoditel-po-lzhi_2x.png" alt="Обложка книги" class="news__product-card-mini__img">
-                  </picture>
+                  <img src="img/book-store/books_all/putevoditel-po-lzhi_2x.png" alt="Обложка книги" class="product-card-mini__img-item">
+                </picture>
               </div>
               <p class="product-card-mini__descr">Критическое мышление в эпоху постправды</p>
             </div>
@@ -121,8 +123,8 @@
   </section>
 
 
-  <div class="library__inner">
-    <div class="library">
+  <div class="library">
+    <div class="library__inner">
       <svg width="101" height="14" class="library__shape">
         <use xlink:href="img/sprite.svg#shape"></use>
       </svg>
@@ -136,21 +138,21 @@
 
 <footer class="page-footer">
   <div class="page-footer__inner">
-    <div class="page-footer-logo__inner">
+    <div class="page-footer__logo">
       <a href="index.html" class="logo">BOOK STORE</a>
-      <span class="page-footer-logo__time">с 9:00 до 19:00</span>
+      <span class="page-footer__logo-time">с 9:00 до 19:00</span>
     </div>
 
-    <nav class="page-footer-nav">
-      <ul class="page-footer-nav__list">
-        <li class="page-footer-nav__item">
-          <a href="#" class="page-footer-nav__link">Книги</a>
+    <nav class="page-footer__nav">
+      <ul class="page-footer__nav-list">
+        <li class="page-footer__nav-item">
+          <a href="#" class="page-footer__nav-link">Книги</a>
         </li>
-        <li class="page-footer-nav__item">
-          <a href="recommendation.html" class="page-footer-nav__link main-nav__link--active">Рекомендации</a>
+        <li class="page-footer__nav-item">
+          <a href="recommendation.html" class="page-footer__nav-link main__nav-link--active">Рекомендации</a>
         </li>
-        <li class="page-footer-nav__item">
-          <a href="contacts.html" class="page-footer-nav__link">Контакты</a>
+        <li class="page-footer__nav-item">
+          <a href="contacts.html" class="page-footer__nav-link">Контакты</a>
         </li>
       </ul>
     </nav>

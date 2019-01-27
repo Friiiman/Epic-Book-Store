@@ -15,15 +15,15 @@ $(document).ready(function($){
 
 
   $('#burger').click(function(menuShow){
-    $(this).toggleClass('burger-hide');
-    $('#burger-close').toggleClass('burger-hide');
-    $('.main-nav__list').toggleClass('menu-open');
+    $(this).toggleClass('main-nav__toggle--hide');
+    $('#burger-close').toggleClass('main-nav__toggle--hide');
+    $('.main-nav__list').toggleClass('main-nav__list--show');
   });
 
   $('#burger-close').click(function(menuHide){
-    $(this).toggleClass('burger-hide');
-    $('#burger').toggleClass('burger-hide');
-    $('.main-nav__list').toggleClass('menu-open');
+    $(this).toggleClass('main-nav__toggle--hide');
+    $('#burger').toggleClass('main-nav__toggle--hide');
+    $('.main-nav__list').toggleClass('main-nav__list--show');
   });
 
 
@@ -36,9 +36,9 @@ $(document).ready(function($){
   });
 
 
-  $('.tabs-link').click(function(tabsActive) {
-    $('.tabs-link').removeClass('tabs-link--active');
-    $(this).addClass('tabs-link--active')
+  $('.tabs__link').click(function(tabsActive) {
+    $('.tabs__link').removeClass('tabs__link--active');
+    $(this).addClass('tabs__link--active')
   });
 
 
@@ -48,18 +48,18 @@ $(document).ready(function($){
   });
 
 
-  $('.book-purchase__description-link-show').click(function(showMore) {
+  $('.book-purchase__description-link').click(function(showMore) {
     showMore.preventDefault();
-    $(this).toggleClass('text-hide');
-    $('.book-purchase__description-text-more').toggleClass('text-hide');
-    $('.book-purchase__description-link-hide').toggleClass('text-hide');
+    $(this).toggleClass('book-purchase__description-link--hide');
+    $('.book-purchase__description-text-more').toggleClass('book-purchase__description-text--hide');
+    $('.book-purchase__description-link-more').toggleClass('book-purchase__description-link--hide');
   });
 
-  $('.book-purchase__description-link-hide').click(function(hideMore) {
+  $('.book-purchase__description-link-more').click(function(hideMore) {
     hideMore.preventDefault();
-    $(this).toggleClass('text-hide');
-    $('.book-purchase__description-text-more').toggleClass('text-hide');
-    $('.book-purchase__description-link-show').toggleClass('text-hide');
+    $(this).toggleClass('book-purchase__description-link--hide');
+    $('.book-purchase__description-text-more').toggleClass('book-purchase__description-text--hide');
+    $('.book-purchase__description-link').toggleClass('book-purchase__description-link--hide');
   });
 
 });

@@ -3,6 +3,14 @@
   margin-bottom: 30px;
   background: linear-gradient(to bottom, $gray-lighten 80%, $main-color 20%);
 
+  @media (min-width: $screen-m) {
+    padding: 0 90px;
+  }
+
+  @media (min-width: $screen-l) {
+    padding: 0 160px;
+  }
+
   &__inner {
     display: flex;
     list-style-type: none;
@@ -16,49 +24,36 @@
     }
   }
 
-  &-item {
+  &__item {
     padding-right: 30px;
+
+    @media (min-width: $screen-l) {
+      padding-right: 50px;
+    }
 
     &:last-child {
       padding-right: 0;
     }
-
-    @media (min-width: $screen-l) {
-      padding-right: 50px;
-
-      &:last-child {
-        padding-right: 0;
-      }
-    }
   }
 
-  &-link {
+  &__link {
     position: relative;
-    color: #000;
+    color: $black;
 
     &:hover {
       color: $link-color;
     }
+  }
 
-    &--active {
-      color: $link-color;
+  &__link--active {
+    color: $link-color;
 
-      &:before {
-        content: '';
-        position: absolute;
-        display: block;
-        width: 100%;
-        bottom: -14px;
-        border-bottom: 2px solid $second-color;
-      }
+    &:before {
+      content: '';
+      position: absolute;
+      width: 100%;
+      bottom: -14px;
+      border-bottom: 2px solid $second-color;
     }
-  }
-
-  @media (min-width: $screen-m) {
-    padding: 0 90px;
-  }
-
-  @media (min-width: $screen-l) {
-    padding: 0 160px;
   }
 }

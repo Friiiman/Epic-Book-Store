@@ -1,0 +1,32 @@
+.member-card {
+  margin-bottom: 50px;
+  width: 100%;
+
+  @media (min-width: $screen-m) {
+    width: 50%;
+    padding-left: 45px;
+    padding-right: 45px;
+  }
+
+  @media (min-width: $screen-l) {
+    width: 25%;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  &:hover {
+
+    .product-card-mini {
+
+      &__img {
+        position: relative;
+        top: -10px;
+        box-shadow: 0 7px 35px 0 $second-color-lighten;
+      }
+
+      &__price {
+        color: $second-color;
+      }
+    }
+  }
+}

@@ -6,6 +6,14 @@
     margin: 0 auto;
   }
 
+  &__title {
+    font-size: 40px;
+    margin: 0;
+    padding-left: 20px;
+    padding-bottom: 40px;
+  }
+
+  /* stylelint-disable */
   &__list {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -18,29 +26,30 @@
       'article-medium   article-vote     article-colored   article-gift'
       'article-footer   article-footer   article-footer    article-gift';
   }
+  /* stylelint-enable */
 
   &__article-little {
     grid-area: article-little;
     padding-left: 20px;
     border-radius: 3px;
     box-shadow: 0 3px 10px 0 rgba(64, 66, 172, 0.35);
+  }
 
-    &__title {
-      margin: 0;
-      padding-top: 20px;
-      font-size: 16px;
-    }
+  &__article-little-title {
+    margin: 0;
+    padding-top: 20px;
+    font-size: 16px;
+  }
 
-    &__description {
-      line-height: 1.7;
-    }
+  &__article-little-description {
+    line-height: 1.7;
+  }
 
-    &__link {
-      color: $link-color;
+  &__article-little-link {
+    color: $link-color;
 
-      &:hover {
-        color: $link-color-hover;
-      }
+    &:hover {
+      color: $link-color-hover;
     }
   }
 
@@ -49,23 +58,37 @@
     padding-left: 12px;
     border-radius: 3px;
     box-shadow: 0 3px 10px 0 rgba(64, 66, 172, 0.35);
+  }
 
-    &__title {
-      margin: 0;
-      padding-top: 15px;
-      font-size: 16px;
+  &__article-vote-title {
+    margin: 0;
+    padding-top: 15px;
+    font-size: 16px;
+  }
+
+  &__article-vote-description {
+    margin: 0;
+    padding-top: 15px;
+    max-width: 250px;
+    line-height: 1.7;
+  }
+
+  &__article-vote-button {
+    margin-top: 12px;
+    width: 96%;
+    height: 50px;
+    border: none;
+    border-radius: 3px;
+    color: $main-color;
+    background-color: $button-color;
+    cursor: pointer;
+
+    &:hover {
+      background-color: $second-color-lighten;
     }
 
-    &__description {
-      margin: 0;
-      padding-top: 15px;
-      max-width: 250px;
-      line-height: 1.7;
-    }
-
-    &__button {
-      margin-top: 12px;
-      width: 96%;
+    &:focus {
+      background-color: $second-color;
     }
   }
 
@@ -75,14 +98,14 @@
     background-image: url(../img/book-store/recommendation-article-medium.png);
     background-repeat: no-repeat;
     border-radius: 3px;
+  }
 
-    &__title {
-      margin: 0;
-      padding-top: 125px;
-      color: $second-text-color;
-      font-weight: 500;
-      text-align: center;
-    }
+  &__article-medium-title {
+    margin: 0;
+    padding-top: 125px;
+    color: $second-text-color;
+    font-weight: 500;
+    text-align: center;
   }
 
   &__article-big {
@@ -92,19 +115,19 @@
     background-repeat: no-repeat;
     background-size: 100%;
     border-radius: 3px;
+  }
 
-    &__title {
-      margin: 0;
-      padding-top: 30px;
-      color: $second-text-color;
-      font-weight: 500;
-      text-align: center;
-    }
+  &__article-big-title {
+    margin: 0;
+    padding-top: 30px;
+    color: $second-text-color;
+    font-weight: 500;
+    text-align: center;
+  }
 
-    &__description {
-      color: $second-text-color;
-      text-align: center;
-    }
+  &__article-big-description {
+    color: $second-text-color;
+    text-align: center;
   }
 
   &__article-colored {
@@ -113,21 +136,21 @@
     background-color: $second-color-light;
     border-radius: 3px;
     box-shadow: 0 3px 10px 0 rgba(64, 66, 172, 0.35);
+  }
 
-    &__title {
-      margin: 0;
-      padding-top: 20px;
-      padding-bottom: 25px;
-      color: $second-text-color;
-      font-size: 16px;
-    }
+  &__article-colored-title {
+    margin: 0;
+    padding-top: 20px;
+    padding-bottom: 25px;
+    color: $second-text-color;
+    font-size: 16px;
+  }
 
-    &__description {
-      margin: 0;
-      max-width: 260px;
-      line-height: 1.7;
-      color: $second-text-color;
-    }
+  &__article-colored-description {
+    margin: 0;
+    max-width: 260px;
+    line-height: 1.7;
+    color: $second-text-color;
   }
 
   &__article-footer {
@@ -135,50 +158,38 @@
     background-color: $second-color;
     background-image: url(../img/book-store/recommendation-article-footer.png);
     background-repeat: no-repeat;
-    background-size: 100%;
     border-radius: 3px;
     text-align: center;
+  }
 
-    &__title {
-      margin: 0;
-      padding-top: 55px;
-      padding-bottom: 20px;
-      color: $second-text-color;
-    }
+  &__article-footer-title {
+    margin: 0;
+    padding-top: 55px;
+    padding-bottom: 20px;
+    color: $second-text-color;
+  }
 
-    &__description {
-      margin: 0;
-      color: $second-text-color;
-    }
+  &__article-footer-description {
+    margin: 0;
+    color: $second-text-color;
   }
 
   &__article-gift {
     grid-area: article-gift;
     padding: 0 20px;
-
-    &__title {
-      margin: 0;
-      padding-top: 35px;
-      padding-bottom: 22px;
-    }
-
-    &__text {
-      margin-bottom: 30px;
-    }
-
-    &__description {
-      line-height: 1.7;
-    }
-
-    &__img-wrap {
-      margin-bottom: 0;
-    }
   }
 
-  &__title {
-    font-size: 40px;
+  &__article-gift-title {
     margin: 0;
-    padding-left: 20px;
-    padding-bottom: 40px;
+    padding-top: 35px;
+    padding-bottom: 22px;
+  }
+
+  &__article-gift-text {
+    margin-bottom: 30px;
+  }
+
+  &__article-gift-description {
+    line-height: 1.7;
   }
 }

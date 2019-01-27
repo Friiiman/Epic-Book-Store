@@ -283,5 +283,32 @@
     "no-missing-end-of-source-newline": [true, {
       "message": "Файл пустой строкой кончаться должен: https://goo.gl/Co2tZ8"
     }],
+    "declaration-colon-space-after": ["always", {
+      "message": "Правило задавая, один пробел после двоеточия ставь"
+    }],
+    "declaration-block-no-duplicate-properties": [true, {
+      "message": "Правила повторять не следует"
+    }],
+    "no-duplicate-selectors": [true, {
+      "message": "Селекторы дублировать не хочешь ты"
+    }],
+    "font-family-name-quotes": ["always-where-recommended", {
+      "message": "В кавычки шрифта название брать следует"
+    }],
+    "declaration-colon-newline-after": ["always-multi-line", {
+      "message": "Для свойств множественных каждое — на строке своей быть должно"
+    }],
+    "value-list-comma-newline-after": ["never-multi-line", {
+      "message": "Значения свойств переносов иметь не должны"
+    }],
+    "value-list-comma-newline-before": ["never-multi-line", {
+      "message": "Значения свойств переносов иметь не должны"
+    }],
+    "value-list-comma-space-after": ["always", {
+      "message": "В значениях после запятой пробел необходим"
+    }],
+    "indentation": [2, {
+      "message": "Использовать пробела два для отступов должен ты"
+    }],
   }
 }

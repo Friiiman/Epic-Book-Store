@@ -16,14 +16,14 @@
 
 <header class="page-header">
   <div class="page-header__inner">
-    <div class="logo__inner">
+    <div class="page-header__logo">
       <a href="index.html" class="logo">BOOK STORE</a>
       <span class="logo__time">с 9:00 до 19:00</span>
     </div>
 
     <nav class="main-nav">
       <button id="burger" class="main-nav__toggle"><span class="main-nav__toggle-name">Главное меню</span></button>
-      <button id="burger-close" class="main-nav__toggle-close burger-hide"><span class="main-nav__toggle-close-name">Главное меню</span></button>
+      <button id="burger-close" class="main-nav__toggle-close main-nav__toggle--hide"><span class="main-nav__toggle-close-name">Главное меню</span></button>
       <div class="main-nav__inner">
         <ul class="main-nav__list">
           <li class="main-nav__item">
@@ -37,9 +37,11 @@
           </li>
           <li class="main-nav__item">
             <a href="phone:88005008020" class="main-nav__link main-nav__link-phone">
-              <svg width="16" height="16" class="phone--blue">
+              <svg width="16" height="16" class="main-nav__link-phone--blue">
                 <use xlink:href="img/sprite.svg#item-phone--blue"></use>
-              </svg> 8 800 500-80-20</a>
+              </svg>
+              8 800 500-80-20
+            </a>
           </li>
         </ul>
         <div class="main-nav__button">
@@ -62,7 +64,7 @@
 
 
 <main class="page-main">
-  <div class="book-purchase__inner">
+  <div class="book-inner">
     <div class="book-purchase">
       <div class="book-purchase__img">
         <picture>
@@ -100,65 +102,82 @@
 
       <div class="book-purchase__main">
         <div class="book-purchase__properties">
-          <div class="book-purchase__properties-title__inner">
-            <span class="book-purchase__properties-title">Артикул</span>
-            <span class="book-purchase__properties-title">В наличии</span>
-            <span class="book-purchase__properties-title">Издательство</span>
-            <span class="book-purchase__properties-title">Цена</span>
+          <div class="book-purchase__properties-title">
+            <span class="book-purchase__properties-title-item">Артикул</span>
+            <span class="book-purchase__properties-title-item">В наличии</span>
+            <span class="book-purchase__properties-title-item">Издательство</span>
+            <span class="book-purchase__properties-title-item">Цена</span>
           </div>
-          <div class="book-purchase__properties-value__inner">
-            <span class="book-purchase__properties-value">1090763</span>
-            <span class="book-purchase__properties-value">5 шт.</span>
-            <span class="book-purchase__properties-value">Издал</span>
-            <span class="book-purchase__properties-value price">800 &#8381;</span>
+          <div class="book-purchase__properties-value">
+            <span class="book-purchase__properties-value-item">1090763</span>
+            <span class="book-purchase__properties-value-item">5 шт.</span>
+            <span class="book-purchase__properties-value-item">Издал</span>
+            <span class="book-purchase__properties-value-item book-purchase__properties-value-item-price">800 &#8381;</span>
           </div>
         </div>
       </div>
 
-        <div class="book-purchase__form__inner">
-          <form action="" class="book-purchase__form">
-            <input type="submit" value="Добавить в корзину" class="book-purchase__form__submit form__submit">
-            <div class="book-purchase__form__quantity__inner">
+        <div class="book-purchase__form">
+          <form action="" class="book-purchase__form-inner">
+            <input type="submit" value="Добавить в корзину" class="book-purchase__form-submit form__submit">
+            <div class="book-purchase__form-quantity">
               <input id="quantity" type="number" value="1" min="1" class="form__quantity">
               <label for="quantity" class="form__quantity-text"> шт.</label>
             </div>
           </form>
-          <div class="book-purchase__form__likes__inner">
+          <div class="book-purchase__form-likes">
             <input id="likes" type="checkbox" class="form__likes">
             <label for="likes" class="form__likes-text">20 людям понравилась эта книга</label>
           </div>
         </div>
 
-      <div class="book-purchase__description__inner">
-        <div class="book-purchase__description">
+      <div class="book-purchase__description">
+        <div class="book-purchase__description-inner">
           <h2 class="book-purchase__description-title">Короткое описание</h2>
-          <div class="book-purchase__description-text__inner">
-            <p class="book-purchase__description-text">Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Пустился правилами использовало ты но маленькая домах своего всемогущая коварный взгляд злых собрал, подпоясал подзаголовок, деревни все страна агенство возвращайся.</p>
-            <p class="book-purchase__description-text">Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Ты, о, рыбными. Реторический она залетают текстов ведущими встретил. Рыбного которой, собрал от всех злых силуэт сбить приставка осталось путь всемогущая?</p>
-            <p class="book-purchase__description-text-more text-hide">Здесь где-то продолжение быть должно...</p>
+          <div class="book-purchase__description-text">
+            <p>Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Пустился правилами использовало ты но маленькая домах своего всемогущая коварный взгляд злых собрал, подпоясал подзаголовок, деревни все страна агенство возвращайся.</p>
+            <p>Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Ты, о, рыбными. Реторический она залетают текстов ведущими встретил. Рыбного которой, собрал от всех злых силуэт сбить приставка осталось путь всемогущая?</p>
           </div>
-          <a href="#" class="book-purchase__description-link-show">Показать полностью<div class="arrow"></div></a>
-          <a href="#" class="book-purchase__description-link-hide text-hide">Скрыть<div class="arrow"></div></a>
-          <div class="book-purchase__description__social">
-            <form action="" class="book-purchase__form__social">
-              <div class="book-purchase__form__social__inner">
-                <input id="facebook" type="checkbox" class="form__social form__social-facebook">
-                <label for="facebook" class="form__social-text">15</label>
-              </div>
-              <div class="book-purchase__form__social__inner">
-                <input id="vk" type="checkbox" class="form__social form__social-vk">
-                <label for="vk" class="form__social-text">4</label>
-              </div>
-              <div class="book-purchase__form__social__inner">
-                <input id="thumbs-up" name="like-dislike" type="radio" class="form__social form__social-thumbs-up">
-                <label for="thumbs-up" class="form__social-text">150</label>
-              </div>
-              <div class="book-purchase__form__social__inner">
-                <input id="thumbs-down" name="like-dislike" type="radio" class="form__social form__social-thumbs-down">
-                <label for="thumbs-down" class="form__social-text">0</label>
-              </div>
-            </form>
+          <div class="book-purchase__description-text-more book-purchase__description-text--hide">
+            <p>Здесь где-то продолжение быть должно...</p>
           </div>
+          <a href="#" class="book-purchase__description-link">Показать полностью<div class="arrow"></div></a>
+          <a href="#" class="book-purchase__description-link-more book-purchase__description-link--hide">Скрыть<div class="arrow"></div></a>
+
+          <ul class="social">
+            <li class="social__item">
+              <button class="social__link social__link--facebook">15</button>
+            </li>
+            <li class="social__item">
+              <button class="social__link social__link--vk">4</button>
+            </li>
+            <li class="social__item">
+              <button class="social__link social__link--thumbs-up">150</button>
+            </li>
+            <li class="social__item">
+              <button class="social__link social__link--thumbs-down">0</button>
+            </li>
+          </ul>
+
+          <!-- <form action="" class="form__social">
+            <div class="form__social-item">
+              <input id="facebook" type="checkbox" class="form__social-input form__social-facebook">
+              <label for="facebook" class="form__social-text">15</label>
+            </div>
+            <div class="form__social-item">
+              <input id="vk" type="checkbox" class="form__social-input form__social-vk">
+              <label for="vk" class="form__social-text">4</label>
+            </div>
+            <div class="form__social-item">
+              <input id="thumbs-up" name="like-dislike" type="radio" class="form__social-input form__social-thumbs-up">
+              <label for="thumbs-up" class="form__social-text">150</label>
+            </div>
+            <div class="form__social-item">
+              <input id="thumbs-down" name="like-dislike" type="radio" class="form__social-input form__social-thumbs-down">
+              <label for="thumbs-down" class="form__social-text">0</label>
+            </div>
+          </form> -->
+
         </div>
       </div>
     </div>
@@ -171,74 +190,73 @@
         <a href="#" class="news__link">Больше книг по теме</a>
       </div>
 
-      <div class="news__list-wrap">
-        <div class="news__list">
-          <article class="news__member-card">
-            <a href="#" class="product-card-mini__inner">
-              <div class="product-card-mini">
-                <h2 class="product-card-mini__title">Латеральная логика</h2>
-                <div class="news__product-card-mini__img-wrap">
-                  <picture>
-                    <source media="(min-width: 1280px)" srcset="img/book-store/books/book-lateralnaya-logika.png">
-                    <img src="img/book-store/books/book-lateralnaya-logika_2x.png" alt="Обложка книги" class="news__product-card-mini__img">
-                  </picture>
-                </div>
-                <p class="product-card-mini__descr">Головоломный путь к нестандартному мышлению</p>
+      <div class="news__list">
+        <article class="news__member-card">
+          <a href="bookInner.html" class="product-card-mini news__product-card-mini">
+            <div class="product-card-mini__inner">
+              <h2 class="product-card-mini__title">Латеральная логика</h2>
+              <div class="news__product-card-mini-img">
+                <picture>
+                  <source media="(min-width: 1280px)" srcset="img/book-store/books/book-lateralnaya-logika.png">
+                  <img src="img/book-store/books/book-lateralnaya-logika_2x.png" alt="Обложка книги" class="news__product-card-mini-img-item">
+                </picture>
               </div>
-            </a>
-          </article>
+              <p class="product-card-mini__descr">Головоломный путь к нестандартному мышлению</p>
+            </div>
+          </a>
+        </article>
 
-          <article class="news__member-card">
-            <a href="#" class="product-card-mini__inner">
-              <div class="product-card-mini">
-                <h2 class="product-card-mini__title">Путеводитель по лжи</h2>
-                <div class="news__product-card-mini__img-wrap">
-                  <picture>
-                    <source media="(min-width: 1280px)" srcset="img/book-store/books_all/putevoditel-po-lzhi.png">
-                    <img src="img/book-store/books_all/putevoditel-po-lzhi_2x.png" alt="Обложка книги" class="news__product-card-mini__img">
-                  </picture>
-                </div>
-                <p class="product-card-mini__descr">Критическое мышление в эпоху постправды</p>
+        <article class="news__member-card">
+          <a href="bookInner.html" class="product-card-mini news__product-card-mini">
+            <div class="product-card-mini__inner">
+              <h2 class="product-card-mini__title">Путеводитель по лжи</h2>
+              <div class="news__product-card-mini-img">
+                <picture>
+                  <source media="(min-width: 1280px)" srcset="img/book-store/books_all/putevoditel-po-lzhi.png">
+                  <img src="img/book-store/books_all/putevoditel-po-lzhi_2x.png" alt="Обложка книги" class="news__product-card-mini-img-item">
+                </picture>
               </div>
-            </a>
-          </article>
+              <p class="product-card-mini__descr">Критическое мышление в эпоху постправды</p>
+            </div>
+          </a>
+        </article>
 
-          <article class="news__member-card">
-            <a href="#" class="product-card-mini__inner">
-              <div class="product-card-mini">
-                <h2 class="product-card-mini__title">Дао физики</h2>
-                <div class="news__product-card-mini__img-wrap">
-                  <picture>
-                    <source media="(min-width: 1280px)" srcset="img/book-store/books_all/dao-fiziki.png">
-                    <img src="img/book-store/books_all/dao-fiziki_2x.png" alt="Обложка книги" class="news__product-card-mini__img">
-                  </picture>
-                </div>
-                <p class="product-card-mini__descr">Исследование параллелей между современной физикой и восточной философией</p>
+        <article class="news__member-card">
+          <a href="bookInner.html" class="product-card-mini news__product-card-mini">
+            <div class="product-card-mini__inner">
+              <h2 class="product-card-mini__title">Дао физики</h2>
+              <div class="news__product-card-mini-img">
+                <picture>
+                  <source media="(min-width: 1280px)" srcset="img/book-store/books_all/dao-fiziki.png">
+                  <img src="img/book-store/books_all/dao-fiziki_2x.png" alt="Обложка книги" class="news__product-card-mini-img-item">
+                </picture>
               </div>
-            </a>
-          </article>
+              <p class="product-card-mini__descr">Исследование параллелей между современной физикой и восточной философией</p>
+            </div>
+          </a>
+        </article>
 
-          <article class="news__member-card">
-            <a href="#" class="product-card-mini__inner">
-              <div class="product-card-mini">
-                <h2 class="product-card-mini__title">Не очевидно</h2>
-                <div class="news__product-card-mini__img-wrap">
-                  <picture>
-                    <source media="(min-width: 1280px)" srcset="img/book-store/books/book-ne-ochevidno.png">
-                    <img src="img/book-store/books/book-ne-ochevidno_2x.png" alt="Обложка книги" class="news__product-card-mini__img">
-                  </picture>
-                </div>
-                <p class="product-card-mini__descr">Как выявлять тренды раньше других</p>
+        <article class="news__member-card">
+          <a href="bookInner.html" class="product-card-mini news__product-card-mini">
+            <div class="product-card-mini__inner">
+              <h2 class="product-card-mini__title">Не очевидно</h2>
+              <div class="news__product-card-mini-img">
+                <picture>
+                  <source media="(min-width: 1280px)" srcset="img/book-store/books/book-ne-ochevidno.png">
+                  <img src="img/book-store/books/book-ne-ochevidno_2x.png" alt="Обложка книги" class="news__product-card-mini-img-item">
+                </picture>
               </div>
-            </a>
-          </article>
-        </div>
+              <p class="product-card-mini__descr">Как выявлять тренды раньше других</p>
+            </div>
+          </a>
+        </article>
+
       </div>
     </div>
   </section>
 
-  <div class="library__inner">
-    <div class="library">
+  <div class="library">
+    <div class="library__inner">
       <svg width="101" height="14" class="library__shape">
         <use xlink:href="img/sprite.svg#shape"></use>
       </svg>
@@ -279,21 +297,21 @@
 
 <footer class="page-footer">
   <div class="page-footer__inner">
-    <div class="page-footer-logo__inner">
+    <div class="page-footer__logo">
       <a href="index.html" class="logo">BOOK STORE</a>
-      <span class="page-footer-logo__time">с 9:00 до 19:00</span>
+      <span class="page-footer__logo-time">с 9:00 до 19:00</span>
     </div>
 
-    <nav class="page-footer-nav">
-      <ul class="page-footer-nav__list">
-        <li class="page-footer-nav__item">
-          <a href="#" class="page-footer-nav__link">Книги</a>
+    <nav class="page-footer__nav">
+      <ul class="page-footer__nav-list">
+        <li class="page-footer__nav-item">
+          <a href="#" class="page-footer__nav-link">Книги</a>
         </li>
-        <li class="page-footer-nav__item">
-          <a href="recommendation.html" class="page-footer-nav__link">Рекомендации</a>
+        <li class="page-footer__nav-item">
+          <a href="recommendation.html" class="page-footer__nav-link">Рекомендации</a>
         </li>
-        <li class="page-footer-nav__item">
-          <a href="contacts.html" class="page-footer-nav__link">Контакты</a>
+        <li class="page-footer__nav-item">
+          <a href="contacts.html" class="page-footer__nav-link">Контакты</a>
         </li>
       </ul>
     </nav>

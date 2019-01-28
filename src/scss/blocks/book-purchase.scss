@@ -39,7 +39,14 @@
     }
 
     @media (min-width: $screen-l) {
-      height: 542px;
+      height: 522px;
+    }
+
+    & .product-card-mini__img {
+
+      @media (min-width: $screen-l) {
+        max-height: 100%;
+      }
     }
   }
 
@@ -56,12 +63,13 @@
 
     @media (min-width: $screen-l) {
       flex-direction: column;
-      height: 530px;
     }
   }
 
   &__pages-link {
     position: relative;
+    height: 100%;
+    width: 100%;
 
     @media (min-width: $screen-m) {
       margin-right: 4px;
@@ -323,6 +331,42 @@
     display: none;
   }
 
+  &__likes-item {
+    position: relative;
+    width: 276px;
+    text-align: right;
+    font-size: 14px;
+    color: $main-text-color;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+
+    &:before,
+    &:hover:before,
+    &:focus:before {
+      content: '❤';
+      left: 0;
+      top: 0;
+      position: absolute;
+      font-size: 18px;
+    }
+
+    &:before {
+      color: $gray-light;
+      top: -3px;
+    }
+
+    &:hover:before {
+      color: $main-color-lighten;
+      top: -3px;
+    }
+
+    &:focus:before {
+      top: -3px;
+      color: $main-color;
+    }
+  }
+
   &__form {
     grid-area: book-purchase__form;
     order: -1;
@@ -338,8 +382,12 @@
     }
   }
 
+  &__form-quantity {
+    margin-bottom: 30px;
+  }
+
   &__form-submit {
-    margin-bottom: 20px;
+    margin-bottom: 30px;
 
     @media (min-width: $screen-m) {
       margin-right: 40px;

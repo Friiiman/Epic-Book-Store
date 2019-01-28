@@ -1,6 +1,6 @@
 .news {
   padding: 0 30px;
-  background: linear-gradient(to bottom, $main-color 0 30%, $second-color-lighten 30% 100%);
+  background: linear-gradient(to bottom, $second-color 0 30%, $main-color-lighten 30% 100%);
 
   @media (min-width: $screen-m) {
     padding: 0 40px;

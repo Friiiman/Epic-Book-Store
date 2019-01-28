@@ -6,7 +6,7 @@
 
 body {
   margin: 0;
-  background-color: $main-color;
+  background-color: $second-color;
 }
 
 main {
@@ -22,7 +22,9 @@ a {
   text-decoration: none;
 }
 
-ul {
+ul,
+ol,
+dl {
   padding: 0;
   margin: 0;
 }

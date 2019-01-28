@@ -1,5 +1,5 @@
 .library {
-  background-color: $second-color;
+  background-color: $main-color;
   background-image: url(../img/book-store/library.png);
   background-repeat: no-repeat;
   background-size: cover;
@@ -33,7 +33,7 @@
     margin: 0;
     text-align: center;
     line-height: 1.7;
-    color: $library-text-color;
+    color: $white;
   }
 
   &__title {

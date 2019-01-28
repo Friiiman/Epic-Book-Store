@@ -79,21 +79,22 @@
     height: 50px;
     border: none;
     border-radius: 3px;
-    color: $main-color;
+    color: $second-color;
     background-color: $button-color;
     cursor: pointer;
 
     &:hover {
-      background-color: $second-color-lighten;
+      background-color: $main-color-lighten;
     }
 
     &:focus {
-      background-color: $second-color;
+      background-color: $main-color;
     }
   }
 
   &__article-medium {
     grid-area: article-medium;
+    display: block;
     background-color: $link-color;
     background-image: url(../img/book-store/recommendation-article-medium.png);
     background-repeat: no-repeat;
@@ -103,13 +104,14 @@
   &__article-medium-title {
     margin: 0;
     padding-top: 125px;
-    color: $second-text-color;
+    color: $white;
     font-weight: 500;
     text-align: center;
   }
 
   &__article-big {
     grid-area: article-big;
+    display: block;
     background-color: $link-color;
     background-image: url(../img/book-store/recommendation-article-big.png);
     background-repeat: no-repeat;
@@ -120,20 +122,21 @@
   &__article-big-title {
     margin: 0;
     padding-top: 30px;
-    color: $second-text-color;
+    color: $white;
     font-weight: 500;
     text-align: center;
   }
 
   &__article-big-description {
-    color: $second-text-color;
+    color: $white;
     text-align: center;
   }
 
   &__article-colored {
     grid-area: article-colored;
+    display: block;
     padding-left: 17px;
-    background-color: $second-color-light;
+    background-color: $main-color-light;
     border-radius: 3px;
     box-shadow: 0 3px 10px 0 rgba(64, 66, 172, 0.35);
   }
@@ -142,7 +145,7 @@
     margin: 0;
     padding-top: 20px;
     padding-bottom: 25px;
-    color: $second-text-color;
+    color: $white;
     font-size: 16px;
   }
 
@@ -150,12 +153,12 @@
     margin: 0;
     max-width: 260px;
     line-height: 1.7;
-    color: $second-text-color;
+    color: $white;
   }
 
   &__article-footer {
     grid-area: article-footer;
-    background-color: $second-color;
+    background-color: $main-color;
     background-image: url(../img/book-store/recommendation-article-footer.png);
     background-repeat: no-repeat;
     border-radius: 3px;
@@ -166,12 +169,12 @@
     margin: 0;
     padding-top: 55px;
     padding-bottom: 20px;
-    color: $second-text-color;
+    color: $white;
   }
 
   &__article-footer-description {
     margin: 0;
-    color: $second-text-color;
+    color: $white;
   }
 
   &__article-gift {
@@ -191,5 +194,9 @@
 
   &__article-gift-description {
     line-height: 1.7;
+  }
+
+  &__product-card-mini .product-card-mini__img {
+    height: 348px;
   }
 }

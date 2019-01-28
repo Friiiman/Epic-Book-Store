@@ -1,0 +1,82 @@
+.social {
+  padding-top: 50px;
+
+  &__item {
+    display: inline-block;
+  }
+
+  &__link {
+    margin-right: 15px;
+    height: 20px;
+    text-align: right;
+    font-weight: 700;
+    color: $main-text-color;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+
+    &:hover {
+      color: $main-color;
+    }
+
+    &:focus {
+      color: $link-color;
+    }
+  }
+
+  &__link--facebook {
+    width: 50px;
+    background-image: url(../img/book-store/social/icon_facebook.svg);
+    background-repeat: no-repeat;
+
+    &:hover {
+      background-image: url(../img/book-store/social/icon_facebook--hover.svg);
+    }
+
+    &:focus {
+      background-image: url(../img/book-store/social/icon_facebook--used.svg);
+    }
+  }
+
+  &__link--vk {
+    width: 45px;
+    background-image: url(../img/book-store/social/icon_vkontakte.svg);
+    background-repeat: no-repeat;
+
+    &:hover {
+      background-image: url(../img/book-store/social/icon_vkontakte--hover.svg);
+    }
+
+    &:focus {
+      background-image: url(../img/book-store/social/icon_vkontakte--used.svg);
+    }
+  }
+
+  &__link--thumbs-up {
+    width: 55px;
+    background-image: url(../img/book-store/social/icon_thumbs-up.svg);
+    background-repeat: no-repeat;
+
+    &:hover {
+      background-image: url(../img/book-store/social/icon_thumbs-up--hover.svg);
+    }
+
+    &:focus {
+      background-image: url(../img/book-store/social/icon_thumbs-up--used.svg);
+    }
+  }
+
+  &__link--thumbs-down {
+    width: 45px;
+    background-image: url(../img/book-store/social/icon_thumbs-down.svg);
+    background-repeat: no-repeat;
+
+    &:hover {
+      background-image: url(../img/book-store/social/icon_thumbs-down--hover.svg);
+    }
+
+    &:focus {
+      background-image: url(../img/book-store/social/icon_thumbs-down--used.svg);
+    }
+  }
+}

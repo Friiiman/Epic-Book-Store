@@ -20,14 +20,14 @@
     width: 30px;
     height: 30px;
     font-weight: 700;
-    color: $black;
+    color: $main-text-color;
     background-color: transparent;
     border: none;
     border-radius: 50%;
     cursor: pointer;
 
     &:hover {
-      background-color: $second-color-lighten;
+      background-color: $main-color-lighten;
     }
 
     &:active {
@@ -37,7 +37,7 @@
   }
 
   &__link--active {
-    color: $second-color;
-    background-color: $second-color-lighten;
+    color: $main-color;
+    background-color: $main-color-lighten;
   }
 }

@@ -10,7 +10,7 @@
     left: 15%;
     width: 40%;
     height: 8px;
-    background-color: $main-color;
+    background-color: $second-color;
 
     @media (min-width: $screen-m) {
       left: 5%;
@@ -29,7 +29,7 @@
     right: 15%;
     width: 40%;
     height: 8px;
-    background-color: $main-color;
+    background-color: $second-color;
 
     @media (min-width: $screen-m) {
       right: 5%;
@@ -56,17 +56,17 @@
   &__message {
     margin-bottom: 40px;
     width: 100%;
-    background-color: $main-color;
+    background-color: $second-color;
     border: none;
     border-bottom: 4px solid $gray-light;
     font-size: 16px;
 
     &:hover {
-      border-color: $second-color-lighten;
+      border-color: $main-color-lighten;
     }
 
     &:focus {
-      border-color: $second-color;
+      border-color: $main-color;
     }
   }
 
@@ -78,17 +78,17 @@
     height: 50px;
     border: none;
     border-radius: 3px;
-    color: $main-color;
+    color: $second-color;
     background-color: $button-color;
     cursor: pointer;
-  }
 
-  &__submit:hover {
-    background-color: $second-color-lighten;
-  }
+    &:hover {
+      background-color: $main-color-lighten;
+    }
 
-  &__submit:focus {
-    background-color: $second-color;
+    &:focus {
+      background-color: $main-color;
+    }
   }
 
   &__quantity {
@@ -122,7 +122,7 @@
     left: 0;
     height: 13px;
     width: 13px;
-    color: $second-color;
+    color: $main-color;
     cursor: pointer;
     display: inline-block;
     margin-right: 0.5rem;
@@ -142,12 +142,12 @@
     }
 
     &:hover:before {
-      color: $second-color-lighten;
+      color: $main-color-lighten;
     }
 
     &:checked:before {
       top: -3px;
-      color: $second-color;
+      color: $main-color;
     }
   }
 
@@ -155,106 +155,105 @@
     font-size: 14px;
   }
 
-  &__social {
-    display: flex;
-    flex-direction: row;
-    padding-top: 50px;
-  }
+  // &__social {
+  //   display: flex;
+  //   flex-direction: row;
+  //   padding-top: 50px;
+  // }
 
-  &__social-item {
-    position: relative;
-    padding-right: 30px;
+  // &__social-item {
+  //   position: relative;
+  //   padding-right: 30px;
 
-    &:last-child {
-      padding-right: 0;
-    }
-  }
+  //   &:last-child {
+  //     padding-right: 0;
+  //   }
+  // }
 
-  &__social-input {
-    appearance: none;
-    position: relative;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    cursor: pointer;
-    display: inline-block;
-    outline: none;
-    z-index: 10;
-  }
+  // &__social-input {
+  //   appearance: none;
+  //   position: relative;
+  //   top: 0;
+  //   right: 0;
+  //   bottom: 0;
+  //   left: 0;
+  //   cursor: pointer;
+  //   display: inline-block;
+  //   outline: none;
+  //   z-index: 10;
+  // }
 
-  &__social-text {
-    padding-left: 35px;
-    font-weight: 700;
-  }
+  // &__social-text {
+  //   padding-left: 35px;
+  //   font-weight: 700;
+  // }
 
-  &__social-facebook,
-  &__social-vk,
-  &__social-thumbs-up,
-  &__social-thumbs-down {
-    position: absolute;
-    display: inline-block;
-    top: -5px;
-    background: url('../img/book-store/sprites/social.png') no-repeat;
-    overflow: hidden;
-    text-align: left;
-  }
+  // &__social-facebook,
+  // &__social-vk,
+  // &__social-thumbs-up,
+  // &__social-thumbs-down {
+  //   position: absolute;
+  //   top: -5px;
+  //   background: url('../img/book-store/sprites/social.png') no-repeat;
+  //   overflow: hidden;
+  //   text-align: left;
+  // }
 
-  &__social-facebook {
-    background-position: -5px -50px;
-    width: 20px;
-    height: 20px;
+  // &__social-facebook {
+  //   background-position: -5px -50px;
+  //   width: 20px;
+  //   height: 20px;
 
-    &:hover {
-      background-position: -5px 0;
-    }
+  //   &:hover {
+  //     background-position: -5px 0;
+  //   }
 
-    &:checked {
-      background-position: -5px -25px;
-    }
-  }
+  //   &:checked {
+  //     background-position: -5px -25px;
+  //   }
+  // }
 
-  &__social-vk {
-    background-position: -5px -125px;
-    width: 20px;
-    height: 20px;
+  // &__social-vk {
+  //   background-position: -5px -125px;
+  //   width: 20px;
+  //   height: 20px;
 
-    &:hover {
-      background-position: -5px -75px;
-    }
+  //   &:hover {
+  //     background-position: -5px -75px;
+  //   }
 
-    &:checked {
-      background-position: -5px -100px;
-    }
-  }
+  //   &:checked {
+  //     background-position: -5px -100px;
+  //   }
+  // }
 
-  &__social-thumbs-up {
-    background-position: -5px -246px;
-    width: 18px;
-    height: 19px;
+  // &__social-thumbs-up {
+  //   background-position: -5px -246px;
+  //   width: 18px;
+  //   height: 19px;
 
-    &:hover {
-      background-position: -5px -198px;
-    }
+  //   &:hover {
+  //     background-position: -5px -198px;
+  //   }
 
-    &:checked {
-      background-position: -5px -222px;
-    }
-  }
+  //   &:checked {
+  //     background-position: -5px -222px;
+  //   }
+  // }
 
-  &__social-thumbs-down {
-    background-position: -5px -270px;
-    width: 18px;
-    height: 19px;
+  // &__social-thumbs-down {
+  //   background-position: -5px -270px;
+  //   width: 18px;
+  //   height: 19px;
 
-    &:hover {
-      background-position: -5px -150px;
-    }
+  //   &:hover {
+  //     background-position: -5px -150px;
+  //   }
 
-    &:checked {
-      background-position: -5px -174px;
-    }
-  }
+  //   &:checked {
+  //     background-position: -5px -174px;
+  //   }
+  // }
 
   &__success,
   &__denied {

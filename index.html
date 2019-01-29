@@ -22,8 +22,7 @@
     </div>
 
     <nav class="main-nav">
-      <button id="burger" class="main-nav__toggle"><span class="main-nav__toggle-name">Главное меню</span></button>
-      <button id="burger-close" class="main-nav__toggle-close main-nav__toggle--hide"><span class="main-nav__toggle-close-name">Главное меню</span></button>
+      <button id="burger" class="main-nav__toggle"><span id="burger-name" class="main-nav__toggle-name">Главное меню</span></button>
       <div class="main-nav__inner">
         <ul class="main-nav__list">
           <li class="main-nav__item">
@@ -37,7 +36,7 @@
           </li>
           <li class="main-nav__item">
             <a href="tel:88005008020" class="main-nav__link main-nav__link-phone">
-              <svg width="16" height="16" class="main-nav__link-phone--blue">
+              <svg width="16" height="16" class="main-nav__link-phone-button">
                 <use xlink:href="img/sprite.svg#item-phone--blue"></use>
               </svg>
               8 800 500-80-20
@@ -45,12 +44,12 @@
           </li>
         </ul>
         <div class="main-nav__button">
-          <a href="#" class="main-nav__button--cart">
+          <a href="#" class="main-nav__button-cart">
             <svg width="21" height="21">
               <use xlink:href="img/sprite.svg#item-cart"></use>
             </svg>
           </a>
-          <a href="#" class="main-nav__button--phone">
+          <a href="#" class="main-nav__button-phone">
             <svg width="21" height="21">
               <use xlink:href="img/sprite.svg#item-phone"></use>
             </svg>
@@ -81,7 +80,7 @@
               <a href="bookInner.html" class="slider__item-img-link">
                 <picture>
                   <source media="(min-width: 1280px)" srcset="img/book-store/books_all/simpsony-i-ikh-matematicheskie-sekrety.png">
-                  <img src="img/book-store/books_all/simpsony-i-ikh-matematicheskie-sekrety_2x.png" alt="Обложка книги" class="slider__item-img">
+                  <img src="img/book-store/books_all/simpsony-i-ikh-matematicheskie-sekrety_2x.png" width="320" height="450" alt="Обложка книги" class="slider__item-img">
                 </picture>
               </a>
             </article>
@@ -97,7 +96,7 @@
               <a href="bookInner.html" class="slider__item-img-link">
                 <picture>
                   <source media="(min-width: 1280px)" srcset="img/book-store/books_all/45-tatuirovok-prodavana.png">
-                  <img src="img/book-store/books_all/45-tatuirovok-prodavana_2x.png" alt="Обложка книги" class="slider__item-img">
+                  <img src="img/book-store/books_all/45-tatuirovok-prodavana_2x.png" width="320" height="450" alt="Обложка книги" class="slider__item-img">
                 </picture>
               </a>
             </article>
@@ -113,7 +112,7 @@
               <a href="bookInner.html" class="slider__item-img-link">
                 <picture>
                   <source media="(min-width: 1280px)" srcset="img/book-store/books_all/pyataya-distsiplina.png">
-                  <img src="img/book-store/books_all/pyataya-distsiplina_2x.png" alt="Обложка книги" class="slider__item-img">
+                  <img src="img/book-store/books_all/pyataya-distsiplina_2x.png" width="320" height="450" alt="Обложка книги" class="slider__item-img">
                 </picture>
               </a>
             </article>
@@ -124,7 +123,7 @@
     </div>
 
 
-    <section class="catalog">
+    <section class="catalog j-catalog">
       <div class="catalog__inner">
         <h1 class="catalog__title">Каталог книг</h1>
 
@@ -241,7 +240,7 @@
                 <h2 class="product-card-mini__title">Латеральная логика</h2>
                 <div class="news__product-card-mini-img">
                   <picture>
-                    <img src="img/book-store/books/book-lateralnaya-logika.jpg" alt="Обложка книги" class="news__product-card-mini-img-item">
+                    <img src="img/book-store/books/book-lateralnaya-logika.jpg" alt="Обложка книги" min-width="210" min-height="320" class="news__product-card-mini-img-item">
                   </picture>
                 </div>
                 <p class="product-card-mini__descr">Головоломный путь к нестандартному мышлению</p>
@@ -256,7 +255,7 @@
                 <div class="news__product-card-mini-img">
                   <picture>
                     <source media="(min-width: 1280px)" srcset="img/book-store/books_all/putevoditel-po-lzhi.png">
-                    <img src="img/book-store/books_all/putevoditel-po-lzhi_2x.png" alt="Обложка книги" class="news__product-card-mini-img-item">
+                    <img src="img/book-store/books_all/putevoditel-po-lzhi_2x.png" alt="Обложка книги" min-width="210" min-height="320" class="news__product-card-mini-img-item">
                   </picture>
                 </div>
                 <p class="product-card-mini__descr">Критическое мышление в эпоху постправды</p>
@@ -271,7 +270,7 @@
                 <div class="news__product-card-mini-img">
                   <picture>
                     <source media="(min-width: 1280px)" srcset="img/book-store/books_all/dao-fiziki.png">
-                    <img src="img/book-store/books_all/dao-fiziki_2x.png" alt="Обложка книги" class="news__product-card-mini-img-item">
+                    <img src="img/book-store/books_all/dao-fiziki_2x.png" alt="Обложка книги" min-width="210" min-height="320" class="news__product-card-mini-img-item">
                   </picture>
                 </div>
                 <p class="product-card-mini__descr">Исследование параллелей между современной физикой и восточной философией</p>
@@ -285,7 +284,7 @@
                 <h2 class="product-card-mini__title">Не очевидно</h2>
                 <div class="news__product-card-mini-img">
                   <picture>
-                    <img src="img/book-store/books/book-ne-ochevidno.jpg" alt="Обложка книги" class="news__product-card-mini-img-item">
+                    <img src="img/book-store/books/book-ne-ochevidno.jpg" alt="Обложка книги" min-width="210" min-height="320" class="news__product-card-mini-img-item">
                   </picture>
                 </div>
                 <p class="product-card-mini__descr">Как выявлять тренды раньше других</p>

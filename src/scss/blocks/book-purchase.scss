@@ -153,8 +153,13 @@
   }
 
   &__about-title {
+    display: none;
     margin: 0;
     padding-bottom: 20px;
+
+    @media (min-width: 450px) {
+      display: block;
+    }
 
     @media (min-width: $screen-m) {
       font-size: 34px;
@@ -162,17 +167,13 @@
   }
 
   &__about-title-narrow {
+    display: block;
+    padding-bottom: 20px;
+    font-size: 30px;
+    font-weight: 700;
 
     @media (min-width: 450px) {
       display: none;
-    }
-  }
-
-  &__about-title-wide {
-    display: none;
-
-    @media (min-width: 450px) {
-      display: block;
     }
   }
 

@@ -14,16 +14,17 @@ $(document).ready(function($){
   });
 
 
-  $('#burger').click(function(menuShow){
-    $(this).toggleClass('main-nav__toggle--hide');
-    $('#burger-close').toggleClass('main-nav__toggle--hide');
-    $('.main-nav__list').toggleClass('main-nav__list--show');
-  });
+  $('.main-nav__list').addClass('main-nav__list--hide');
+    if( $(window).width() >= 768 ) {
+      $('.main-nav__list').removeClass('main-nav__list--hide');
+    };
 
-  $('#burger-close').click(function(menuHide){
-    $(this).toggleClass('main-nav__toggle--hide');
-    $('#burger').toggleClass('main-nav__toggle--hide');
-    $('.main-nav__list').toggleClass('main-nav__list--show');
+  $('#burger').click(function(menuShow){
+    $(this).toggleClass('main-nav__toggle');
+    $(this).toggleClass('main-nav__toggle-close');
+    $('#burger-name').toggleClass('main-nav__toggle-name');
+    $('#burger-name').toggleClass('main-nav__toggle-close-name');
+    $('.main-nav__list').toggleClass('main-nav__list--hide');
   });
 
 

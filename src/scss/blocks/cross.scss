@@ -32,8 +32,8 @@
   &:after {
     transform: rotate(-45deg);
   }
-}
 
-.cross-name {
-  font-size: 0;
+  &-name {
+    font-size: 0;
+  }
 }

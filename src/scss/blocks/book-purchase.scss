@@ -43,6 +43,8 @@
     }
 
     & .product-card-mini__img {
+      width: 100%;
+      height: 100%;
 
       @media (min-width: $screen-l) {
         max-height: 100%;
@@ -53,6 +55,13 @@
   &__pages {
     display: none;
     grid-area: book-purchase__pages;
+
+    @media (min-width: $screen-m) {
+      display: block;
+    }
+  }
+
+  &__pages-inner {
     padding: 13px 8px 10px;
     border: 4px solid $gray-lighten;
 
@@ -68,7 +77,6 @@
 
   &__pages-link {
     position: relative;
-    height: 100%;
     width: 100%;
 
     @media (min-width: $screen-m) {
@@ -138,17 +146,34 @@
     grid-area: book-purchase__about;
   }
 
-  &__about-autor,
-  &__about-title {
-    padding-bottom: 20px;
-  }
-
   &__about-autor {
+    padding-bottom: 5px;
+    font-size: 15px;
     font-weight: 700;
   }
 
   &__about-title {
     margin: 0;
+    padding-bottom: 20px;
+
+    @media (min-width: $screen-m) {
+      font-size: 34px;
+    }
+  }
+
+  &__about-title-narrow {
+
+    @media (min-width: 450px) {
+      display: none;
+    }
+  }
+
+  &__about-title-wide {
+    display: none;
+
+    @media (min-width: 450px) {
+      display: block;
+    }
   }
 
   &__about-description {

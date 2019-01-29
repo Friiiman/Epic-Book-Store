@@ -22,8 +22,7 @@
     </div>
 
     <nav class="main-nav">
-      <button id="burger" class="main-nav__toggle"><span class="main-nav__toggle-name">Главное меню</span></button>
-      <button id="burger-close" class="main-nav__toggle-close main-nav__toggle--hide"><span class="main-nav__toggle-close-name">Главное меню</span></button>
+      <button id="burger" class="main-nav__toggle"><span id="burger-name" class="main-nav__toggle-name">Главное меню</span></button>
       <div class="main-nav__inner">
         <ul class="main-nav__list">
           <li class="main-nav__item">
@@ -37,7 +36,7 @@
           </li>
           <li class="main-nav__item">
             <a href="phone:88005008020" class="main-nav__link main-nav__link-phone">
-              <svg width="16" height="16" class="main-nav__link-phone--blue">
+              <svg width="16" height="16" class="main-nav__link-phone-button">
                 <use xlink:href="img/sprite.svg#item-phone--blue"></use>
               </svg>
               8 800 500-80-20
@@ -45,12 +44,12 @@
           </li>
         </ul>
         <div class="main-nav__button">
-          <a href="#" class="main-nav__button--cart">
+          <a href="#" class="main-nav__button-cart">
             <svg width="21" height="21">
               <use xlink:href="img/sprite.svg#item-cart"></use>
             </svg>
           </a>
-          <a href="#" class="main-nav__button--phone">
+          <a href="#" class="main-nav__button-phone">
             <svg width="21" height="21">
               <use xlink:href="img/sprite.svg#item-phone"></use>
             </svg>
@@ -69,34 +68,39 @@
       <div class="book-purchase__img">
         <picture>
           <source media="(min-width: 1280px)" srcset="img/book-store/books_all/superpotrebiteli.png">
-          <img src="img/book-store/books_all/superpotrebiteli_2x.png" alt="Обложка книги" class="product-card-mini__img">
+          <img src="img/book-store/books_all/superpotrebiteli_2x.png" width="300" height="425" alt="Обложка книги" class="product-card-mini__img">
         </picture>
       </div>
 
       <div class="book-purchase__pages">
-        <a href="#" class="book-purchase__pages-link">
-          <picture>
-            <source media="(min-width: 1280px)" srcset="img/book-store/capture.png">
-            <img src="img/book-store/capture_2x.png" alt="Страница киниги" class="book-purchase__pages-item">
-          </picture>
-        </a>
-        <a href="#" class="book-purchase__pages-link">
-          <picture>
-            <source media="(min-width: 1280px)" srcset="img/book-store/capture.png">
-            <img src="img/book-store/capture_2x.png" alt="Страница киниги" class="book-purchase__pages-item">
-          </picture>
-        </a>
-        <a href="#" class="book-purchase__pages-link">
-          <picture>
-            <source media="(min-width: 1280px)" srcset="img/book-store/capture.png">
-            <img src="img/book-store/capture_2x.png" alt="Страница киниги" class="book-purchase__pages-item">
-          </picture>
-        </a>
+        <div class="book-purchase__pages-inner">
+          <a href="#" class="book-purchase__pages-link">
+            <picture>
+              <source media="(min-width: 1280px)" srcset="img/book-store/capture.png">
+              <img src="img/book-store/capture_2x.png" width="120" max-height="160" alt="Страница киниги" class="book-purchase__pages-item">
+            </picture>
+          </a>
+          <a href="#" class="book-purchase__pages-link">
+            <picture>
+              <source media="(min-width: 1280px)" srcset="img/book-store/capture.png">
+              <img src="img/book-store/capture_2x.png" width="120" height="160" alt="Страница киниги" class="book-purchase__pages-item">
+            </picture>
+          </a>
+          <a href="#" class="book-purchase__pages-link">
+            <picture>
+              <source media="(min-width: 1280px)" srcset="img/book-store/capture.png">
+              <img src="img/book-store/capture_2x.png" width="120" height="160" alt="Страница киниги" class="book-purchase__pages-item">
+            </picture>
+          </a>
+        </div>
       </div>
 
       <div class="book-purchase__about">
         <span class="book-purchase__about-autor">Эдди Юн</span>
-        <h1 class="book-purchase__about-title">Супер потребители</h1>
+        <h1 class="book-purchase__about-title">
+          <span class="book-purchase__about-title-wide">Суперпотребители</span>
+          <span class="book-purchase__about-title-narrow">Супер-<br>потребители</span>
+        </h1>
         <span class="book-purchase__about-description">Кто это и почему они так важны для вашего бизнеса</span>
       </div>
 
@@ -177,7 +181,7 @@
               <h2 class="product-card-mini__title">Латеральная логика</h2>
               <div class="news__product-card-mini-img">
                 <picture>
-                  <img src="img/book-store/books/book-lateralnaya-logika.jpg" alt="Обложка книги" class="news__product-card-mini-img-item">
+                  <img src="img/book-store/books/book-lateralnaya-logika.jpg" alt="Обложка книги" min-width="210" min-height="320" class="news__product-card-mini-img-item">
                 </picture>
               </div>
               <p class="product-card-mini__descr">Головоломный путь к нестандартному мышлению</p>
@@ -192,7 +196,7 @@
               <div class="news__product-card-mini-img">
                 <picture>
                   <source media="(min-width: 1280px)" srcset="img/book-store/books_all/putevoditel-po-lzhi.png">
-                  <img src="img/book-store/books_all/putevoditel-po-lzhi_2x.png" alt="Обложка книги" class="news__product-card-mini-img-item">
+                  <img src="img/book-store/books_all/putevoditel-po-lzhi_2x.png" alt="Обложка книги" min-width="210" min-height="320" class="news__product-card-mini-img-item">
                 </picture>
               </div>
               <p class="product-card-mini__descr">Критическое мышление в эпоху постправды</p>
@@ -207,7 +211,7 @@
               <div class="news__product-card-mini-img">
                 <picture>
                   <source media="(min-width: 1280px)" srcset="img/book-store/books_all/dao-fiziki.png">
-                  <img src="img/book-store/books_all/dao-fiziki_2x.png" alt="Обложка книги" class="news__product-card-mini-img-item">
+                  <img src="img/book-store/books_all/dao-fiziki_2x.png" alt="Обложка книги" min-width="210" min-height="320" class="news__product-card-mini-img-item">
                 </picture>
               </div>
               <p class="product-card-mini__descr">Исследование параллелей между современной физикой и восточной философией</p>
@@ -221,7 +225,7 @@
               <h2 class="product-card-mini__title">Не очевидно</h2>
               <div class="news__product-card-mini-img">
                 <picture>
-                  <img src="img/book-store/books/book-ne-ochevidno.jpg" alt="Обложка книги" class="news__product-card-mini-img-item">
+                  <img src="img/book-store/books/book-ne-ochevidno.jpg" alt="Обложка книги" min-width="210" min-height="320" class="news__product-card-mini-img-item">
                 </picture>
               </div>
               <p class="product-card-mini__descr">Как выявлять тренды раньше других</p>
@@ -249,21 +253,21 @@
       <div class="pages-slider__item">
         <picture>
           <source media="(min-width: 1280px)" srcset="img/book-store/capture.png">
-          <img src="img/book-store/capture_2x.png" alt="Страница киниги" class="pages-slider__img">
+          <img src="img/book-store/capture_2x.png" width="auto" height="440" alt="Страница киниги" class="pages-slider__img">
         </picture>
       </div>
 
       <div class="pages-slider__item">
         <picture>
           <source media="(min-width: 1280px)" srcset="img/book-store/capture.png">
-          <img src="img/book-store/capture_2x.png" alt="Страница киниги" class="pages-slider__img">
+          <img src="img/book-store/capture_2x.png" width="auto" height="440" alt="Страница киниги" class="pages-slider__img">
         </picture>
       </div>
 
       <div class="pages-slider__item">
         <picture>
           <source media="(min-width: 1280px)" srcset="img/book-store/capture.png">
-          <img src="img/book-store/capture_2x.png" alt="Страница киниги" class="pages-slider__img">
+          <img src="img/book-store/capture_2x.png" width="auto" height="440" alt="Страница киниги" class="pages-slider__img">
         </picture>
       </div>
     </div>

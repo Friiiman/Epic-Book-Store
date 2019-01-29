@@ -8,15 +8,15 @@
   &__inner {
     position: relative;
     border: 8px solid $gray-lighten;
-    padding: 0 13px;
+    padding: 0 13px 35px;
 
     @media (min-width: $screen-m) {
-      padding: 0 20px;
+      padding: 0 20px 50px;
     }
 
     @media (min-width: $screen-l) {
       margin: 0 auto;
-      padding: 0 10px;
+      padding: 0 10px 50px;
       width: 1160px;
     }
 
@@ -101,14 +101,6 @@
 
       @media (min-width: $screen-l) {
         margin-right: auto;
-      }
-    }
-
-    &:last-child {
-      padding-bottom: 50px;
-
-      @media (min-width: $screen-l) {
-        padding-right: 0;
       }
     }
   }

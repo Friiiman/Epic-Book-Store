@@ -20,10 +20,10 @@
     padding: 19px 23px 19px 50px;
     width: 195px;
     height: 140px;
-    top: -156px;
+    top: 38px;
     left: -116px;
     text-align: left;
-    opacity: 0;
+    opacity: 1;
     background-color: rgba(244, 212, 228, 0.8);
     transition: all linear 0.3s;
 
@@ -56,7 +56,7 @@
     }
   }
 
-  &__link-phone--blue {
+  &__link-phone-button {
     position: absolute;
     left: -25px;
     top: 2px;
@@ -87,7 +87,7 @@
     }
   }
 
-  &__button--phone {
+  &__button-phone {
     display: none;
 
     @media (min-width: $screen-m) {
@@ -191,11 +191,12 @@
     bottom: 0;
     margin: auto;
     font-size: 0;
+    opacity: 1;
   }
 
-  &__list--show {
-    top: 38px;
-    opacity: 1;
+  &__list--hide {
+    top: -156px;
+    opacity: 0;
   }
 
   &__toggle--hide {

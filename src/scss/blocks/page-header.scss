@@ -23,9 +23,10 @@
     width: auto;
     display: flex;
     flex-wrap: wrap;
+    align-items: center;
 
     @media (min-width: $screen-m) {
-      width: 260px;
+      width: 270px;
     }
   }
 }

@@ -18,7 +18,7 @@
   &__description-title {
     margin: 0;
     padding-bottom: 40px;
-    font-size: 40px;
+    font-size: 50px;
   }
 
   &__description-list {
@@ -38,6 +38,10 @@
 
     @media (min-width: $screen-m) {
       padding-right: 80px;
+    }
+
+    @media (min-width: $screen-l) {
+      padding-right: 110px;
     }
 
     &:last-child {

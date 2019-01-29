@@ -45,6 +45,7 @@
     margin: 0;
     padding-top: 40px;
     padding-bottom: 20px;
+    font-size: 30px;
   }
 
   &__text {
@@ -83,11 +84,11 @@
     cursor: pointer;
 
     &:hover {
-      background-color: $main-color-lighten;
+      background-color: $button-color-hover;
     }
 
     &:focus {
-      background-color: $main-color;
+      background-color: $button-color-pressed;
     }
   }
 

@@ -38,7 +38,8 @@
   &__item-about {
     font-style: italic;
     padding: 0 20px;
-    max-width: 450px;
+    max-width: 420px;
+    line-height: 1.5;
 
     @media (min-width: $screen-l) {
       padding: 0 40px 30px;
@@ -94,7 +95,7 @@
 
   &__item-link {
     position: absolute;
-    bottom: 25px;
+    bottom: 40px;
     font-size: 16px;
     color: $link-color;
 
@@ -108,8 +109,6 @@
     right: 50px;
     top: 20px;
     bottom: 0;
-    width: auto;
-    height: 450px;
   }
 
   &__item-img-link {

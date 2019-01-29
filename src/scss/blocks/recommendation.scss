@@ -7,7 +7,7 @@
   }
 
   &__title {
-    font-size: 40px;
+    font-size: 50px;
     margin: 0;
     padding-left: 20px;
     padding-bottom: 40px;
@@ -16,7 +16,7 @@
   /* stylelint-disable */
   &__list {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: repeat(4, 1fr);
     grid-template-rows: 171px 171px 171px 171px;
     grid-column-gap: 10px;
     grid-row-gap: 10px;
@@ -194,9 +194,5 @@
 
   &__article-gift-description {
     line-height: 1.7;
-  }
-
-  &__product-card-mini .product-card-mini__img {
-    height: 348px;
   }
 }

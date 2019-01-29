@@ -1426,19 +1426,23 @@ input[type='number']:focus {
     font-size: 15px;
     font-weight: 700; }
   .book-purchase__about-title {
+    display: none;
     margin: 0;
     padding-bottom: 20px; }
+    @media (min-width: 450px) {
+      .book-purchase__about-title {
+        display: block; } }
     @media (min-width: 768px) {
       .book-purchase__about-title {
         font-size: 34px; } }
-  @media (min-width: 450px) {
-    .book-purchase__about-title-narrow {
-      display: none; } }
-  .book-purchase__about-title-wide {
-    display: none; }
+  .book-purchase__about-title-narrow {
+    display: block;
+    padding-bottom: 20px;
+    font-size: 30px;
+    font-weight: 700; }
     @media (min-width: 450px) {
-      .book-purchase__about-title-wide {
-        display: block; } }
+      .book-purchase__about-title-narrow {
+        display: none; } }
   .book-purchase__about-description {
     line-height: 1.4;
     padding-bottom: 35px; }
